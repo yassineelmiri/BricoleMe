@@ -1,66 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# BricoleMe
+Contexte du projet
+La société BricoleMe aspire à développer une plateforme en ligne dédiée aux services de bricolage, établissant une connexion entre les clients ayant des besoins de réparation ou d'entretien et divers artisans qualifiés, tels que plombiers, électriciens, jardiniers, etc. Vous êtes chargé(e) de développer cette plateforme en utilisant le framework Laravel.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+​
 
-## About Laravel
+### Fonctionnalités Requises:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+​
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+++Authentification et Autorisation:++
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-Les utilisateurs peuvent s'inscrire en tant que clients ou artisans.
 
-## Learning Laravel
+-Mettre en place un système d'authentification avec des rôles définis tels que Client, Artisan, et Administrateur.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-L'utilisateur peut se connecter avec des identifiants uniques email, username ou via son compte Gmail, Facebook etc...
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-Utiliser les Middlewares pour régir l'accès aux profils et aux fonctionnalités en fonction du rôle de l'utilisateur.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+​
 
-## Laravel Sponsors
+++Inscription des Artisans:++
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+​
 
-### Premium Partners
+​
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-Lors de l'inscription, l'artisan choisit son métier et spécifie ses compétences, par exemple, un plombier pourrait se spécialiser dans l'installation de lavabos et la résolution de fuites. Il a également la possibilité d'enrichir son profil en ajoutant des photos de ses réalisations passées.
 
-## Contributing
+-L'artisan peut définir un tarif spécifique pour chaque service qu'il propose.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-Les artisans doivent soumettre une demande à l'administrateur pour changer de métier ou ajouter de nouveaux domaines d'expertise. L'administrateur approuve ou refuse ces demandes.
 
-## Code of Conduct
+​
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+​
 
-## Security Vulnerabilities
+++Inscription des clients et Sélection des Artisans:++
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+​
 
-## License
+​
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-Le client peut s'inscrire en fournissant sa photo, nom, prénom, date de naissance, ville, numéro de téléphone…
+
+-Les clients peuvent sélectionner des artisans en fonction de leur métier, disponibilité et tarif pour l'intervention.
+
+-Le client a la possibilité de télécharger le devis au format PDF, comprenant les détails tels que le nom et prénom du client, le nom et prénom de l'artisan, les pannes sélectionnées, le tarif, la date de création du devis, la validité du devis et l'adresse du client.
+
+-Les clients peuvent recevoir un devis par email au format PDF.
+
+​
+
+++Gestion des Réservations:++
+
+​
+
+-Les clients peuvent annuler une intervention ou changer la date en fonction de la disponibilité de l'artisan avant une heure d’intervention.
+
+-Après la finalisation de l'intervention, les clients peuvent attribuer une note, un commentaire à l'artisan.
+
+​
+
+++Service à la Clientèle:++
+
+​
+
+-Les clients ont la possibilité de déposer des réclamations en cas d'insatisfaction ou de problème avec un artisan.
+
+-Les réclamations peuvent être gérées par l'administrateur pour assurer une résolution efficace.
+
+​
+
+++Signature électronique:++
+
+​
+
+-Les clients peuvent signer le devis électronique et l'artisan concerné le recevra par email.
+
+​
+
+Bonus:
+
+-Une fonction de chat en temps réel via websockets permet une communication instantanée entre le client et l'artisan.
+
+-Les clients peuvent envoyer leur localisation réelle aux artisans pour faciliter l'intervention.
+
+-Repository pattern in Laravel.
