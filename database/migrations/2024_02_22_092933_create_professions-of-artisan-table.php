@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('professions_of_artisan', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('city');
-            $table->string('phone_number');
-            $table->rememberToken();
+            $table->foreignId('artisan_id')->constrained('artisans');
+            $table->foreignId('profession_id')->constrained('professions');
             $table->timestamps();
         });
     }
@@ -29,6 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('professions_of_artisan');
+
     }
 };
