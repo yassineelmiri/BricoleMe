@@ -10,27 +10,27 @@
 
 </head>
 
-<body class="bg-violet-300">
-    <div class="flex flex-col h-screen bg-violet-300">
+<body class="bg-amber-50">
+    <div class="flex flex-col h-screen bg-amber-50">
 
 
-        <div class="bg-orange-200 text-white shadow w-full p-2 flex items-center justify-between">
+        <div class="bg-white text-white shadow w-full p-2 flex items-center justify-between">
             <div class="flex items-center">
                 <div class="flex items-center">
-                    <img src="../public/images/logoblack.png" alt="Logo" class="w-28 h-18 mr-2">
+                    <img src="logo.png" alt="Logo" class="ml-6 w-16 h-16 mr-2">
                 </div>
             </div>
 
             <div class="space-x-5">
                 <button>
-                    <svg class="w-6 h-6 text-orange-400" aria-hidden="true"
+                    <svg class="w-6 h-6 text-black" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 21">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8 3.464V1.1m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175C15 15.4 15 16 14.462 16H1.538C1 16 1 15.4 1 14.807c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 8 3.464ZM4.54 16a3.48 3.48 0 0 0 6.92 0H4.54Z" />
                     </svg>
                 </button>
                 <button>
-                    <svg class="w-6 h-6 text-orange-400" aria-hidden="true" viewBox="0 0 20 18"
+                    <svg class="w-6 h-6 mr-6 text-black" aria-hidden="true" viewBox="0 0 20 18"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M6.5 8C5.80777 8 5.13108 7.79473 4.55551 7.41015C3.97993 7.02556 3.53133 6.47893 3.26642 5.83939C3.00152 5.19985 2.9322 4.49612 3.06725 3.81719C3.2023 3.13825 3.53564 2.51461 4.02513 2.02513C4.51461 1.53564 5.13825 1.2023 5.81719 1.06725C6.49612 0.932205 7.19985 1.00152 7.83939 1.26642C8.47893 1.53133 9.02556 1.97993 9.41015 2.55551C9.79473 3.13108 10 3.80777 10 4.5"
@@ -48,28 +48,28 @@
 
         <div class="flex-1 flex flex-wrap">
             <div class="p-2 bg-violet-200 w-full md:w-60 flex flex-col md:flex hidden" id="sideNav">
-                <nav><a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-violet-400 hover:text-white "
+                <nav><a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white "
                         href="index">
-                        <i class="fas fa-home mr-2"></i>dashboard
+                        <i class="fas fa-home mr-2"></i>Statestiques
                     </a>
-                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-violet-400 hover:text-white"
+                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
                         href="users">
-                        <i class="fas fa-users mr-2"></i>Users
+                        <i class="fas fa-users mr-2"></i>Clients
                     </a>
 
-                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-violet-400 hover:text-white"
+                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
                         href="categories">
-                        <i class="fas fa-file-alt mr-2"></i>Categories
+                        <i class="fas fa-file-alt mr-2"></i>Workers
                     </a>
 
-                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-violet-400 hover:text-white"
+                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
                         href="products">
-                        <i class="fas fa-store mr-2"></i>Products
+                        <i class="fas fa-store mr-2"></i>reservations
                     </a>
 
                 </nav>
 
-                <a class="block text-gray-500 py-2.5 px-4 my-2 rounded transition duration-200 hover:bg-violet-400 hover:text-white mt-auto"
+                <a class="block text-gray-500 py-2.5 px-4 my-2 rounded transition duration-200 hover:bg-indigo-300 hover:text-white mt-auto"
                     href="#">
                     <i class="fas fa-sign-out-alt mr-2"></i>logout
                 </a>
@@ -80,11 +80,11 @@
             <div class="flex-1 p-4 w-full md:w-1/2">
 
                 <div class="mt-8 flex flex-wrap space-x-0 space-y-2 md:space-x-4 md:space-y-0">
-                    <div class="flex-1 bg-orange-200 p-4 shadow rounded-lg md:w-1/2">
+                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
 
                         <h2 class="text-black text-lg font-semibold pb-1">users</h2>
                         <div class="my-1"></div>
-                        <div class="bg-orange-500 h-px mb-6"></div>
+                        <div class="bg-indigo-300 h-px mb-6"></div>
                         <div class="flex">
                             <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -101,10 +101,10 @@
                         </div>
                     </div>
 
-                    <div class="flex-1 bg-white p-4 shadow rounded-lg md:w-1/2">
-                        <h2 class="text-black text-lg font-semibold pb-1">product</h2>
+                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
+                        <h2 class="text-black text-lg font-semibold pb-1">Workers</h2>
                         <div class="my-1"></div>
-                        <div class="bg-orange-500 h-px mb-6"></div>
+                        <div class="bg-indigo-300 h-px mb-6"></div>
                         <div class="flex">
                             <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
@@ -116,14 +116,14 @@
                         </span>
                         <h3
                             class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-black border-b border-grey-light">
-                            Available products</h3>
+                            Available workers</h3>
 </div>
                     </div>
 
-                    <div class="flex-1 bg-white p-4 shadow rounded-lg md:w-1/2">
-                        <h2 class="text-black text-lg font-semibold pb-1">orders</h2>
+                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
+                        <h2 class="text-black text-lg font-semibold pb-1">reservations</h2>
                         <div class="my-1"></div>
-                        <div class="bg-orange-500 h-px mb-6"></div>
+                        <div class="bg-indigo-300 h-px mb-6"></div>
                         <div class="flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 20">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1"/>
@@ -133,7 +133,7 @@
                         </span>
                         <h3
                             class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-black border-b border-grey-light">
-                            Latest orders</h3>
+                            Latest reservations</h3>
 
                     </div></div>
                 </div>
