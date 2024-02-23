@@ -18,4 +18,9 @@ class Reservation extends Model
     public function client(){
         return $this->belongsToOne(client::class);
     }
+
+    protected $fillable = [
+        'client_id',
+
+    ];
 }
