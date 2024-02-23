@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ReservationController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/Admin-Dash', function () {
+    return view('admin-dashboard');
+});
+
+
+Route::resource('client',ClientController::class);
+
 
 Route::get('/login',[\App\Http\Controllers\AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
@@ -23,4 +36,7 @@ Route::get('/register/customer',[\App\Http\Controllers\AuthenticationController:
 Route::post('/auth/artisan/register',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistration'])->name('artisan.register');
 
 
+
+Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
+Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 

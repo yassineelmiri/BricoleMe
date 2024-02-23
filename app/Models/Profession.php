@@ -13,4 +13,5 @@ class Profession extends Model
     {
         return $this->belongsToMany(Artisan::class,'professions_of_artisan');
     }
+
 }

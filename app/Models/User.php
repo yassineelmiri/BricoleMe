@@ -48,5 +48,8 @@ class User extends Authenticatable
     public function artisan()
     {
         return $this->hasOne(Artisan::class);
+    public function client(){
+        return $this->hasMany(client::class);
+
     }
 }
