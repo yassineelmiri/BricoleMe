@@ -9,8 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 class TestController extends BaseController
 {
     public function test()
-    {
-        return view('client.show');
+    { 
+        return view('client.select');
     }
 
 }

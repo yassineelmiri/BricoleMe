@@ -6,19 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class artisan extends Model
+class Services extends Model
 {
     use HasFactory, SoftDeletes;
     protected $date = ['created_at'];
 
     protected $fillable = [
-        'user_id',
+        'skill',
+        'max_price',
+        'price',
 
     ];
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 
 }
