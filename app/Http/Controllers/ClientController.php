@@ -47,7 +47,7 @@ class ClientController extends Controller
         $client = client::all();
         return view('client.show',compact('client'));
     }
-
+   
     /**
      * Show the form for editing the specified resource.
      */
@@ -62,7 +62,7 @@ class ClientController extends Controller
      */
     public function update(Request $request, client $client)
     {
-        
+        //
     }
 
     /**

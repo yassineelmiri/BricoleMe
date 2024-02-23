@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArtisanController;
+use App\Http\Controllers\TestController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +27,9 @@ Route::get('/Admin-Dash', function () {
 
 
 Route::resource('client',ClientController::class);
+Route::resource('artisan',ArtisanController::class);
 
+Route::get('/test',[TestController::class,'test'])->name('show.profile');
 
 Route::get('/login',[\App\Http\Controllers\AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
