@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ReservationController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +35,7 @@ Route::get('/register/artisan',[\App\Http\Controllers\AuthenticationController::
 Route::get('/register/customer',[\App\Http\Controllers\AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
 
 
+
+Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
+Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 
