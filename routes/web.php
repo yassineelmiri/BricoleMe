@@ -33,6 +33,7 @@ Route::resource('client',ClientController::class);
 Route::get('/login',[\App\Http\Controllers\AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
 Route::get('/register/customer',[\App\Http\Controllers\AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
+Route::post('/auth/artisan/register',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistration'])->name('artisan.register');
 
 
 
