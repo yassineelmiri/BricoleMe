@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'city',
+        'phone_number'
     ];
 
     /**
@@ -43,7 +45,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function artisan()
+    {
+        return $this->hasOne(Artisan::class);
+    }
     public function client(){
         return $this->hasMany(client::class);
+
     }
 }

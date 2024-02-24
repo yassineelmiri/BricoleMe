@@ -1,8 +1,12 @@
+
 <?php
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ArtisanController;
 use App\Http\Controllers\TestController;
+
+use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ReservationController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -31,9 +35,13 @@ Route::resource('artisan',ArtisanController::class);
 
 Route::get('/test',[TestController::class,'test'])->name('show.profile');
 
-Route::get('/login',[\App\Http\Controllers\AuthenticationController::class,'loginPage'])->name('login.view');
-Route::get('/register/artisan',[\App\Http\Controllers\AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
-Route::get('/register/customer',[\App\Http\Controllers\AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
+Route::get('/login',[AuthenticationController::class,'loginPage'])->name('login.view');
+Route::get('/register/artisan',[AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
+Route::get('/register/customer',[AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
+Route::post('/auth/artisan/register',[AuthenticationController::class,'artisanRegistration'])->name('artisan.register');
 
 
+
+Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
+Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 
