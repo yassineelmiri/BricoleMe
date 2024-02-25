@@ -29,11 +29,12 @@ Route::get('/Admin-Dash', function () {
     return view('admin-dashboard');
 });
 
+Route::get('/artisan/detail',[TestController::class,'index'])->name('artisan.detail');
 
 Route::resource('client',ClientController::class);
 Route::resource('artisan',ArtisanController::class);
 
-Route::get('/test',[TestController::class,'test'])->name('show.profile');
+Route::get('/profission',[TestController::class,'test'])->name('show.profession');
 
 Route::get('/login',[AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');

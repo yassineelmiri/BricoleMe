@@ -114,83 +114,18 @@
 
         <div class="container md:mt-24 mt-16">
             <div class="grid grid-cols-1 pb-8 text-center">
-                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Popular
-                    Categories</h3>
+                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Les Professions</h3>
 
                 <p class="text-slate-400 max-w-xl mx-auto">Search all the open positions on the web. Get your own
                     personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
             </div><!--end grid-->
 
             <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                <div
-                    class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-gitlab"></i>
-                    </div>
+               
+                @foreach ($professions as $profession)
+                <x-card-servises :profession="$profession" />                <!--end content-->
 
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Business <br>
-                            Development</a>
-                        <p class="text-slate-400 mt-3">74 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-book-open"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Marketing & <br>
-                            Communication</a>
-                        <p class="text-slate-400 mt-3">20 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-chart-pie-alt"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Project <br>
-                            Management</a>
-                        <p class="text-slate-400 mt-3">35 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-feedback"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Customer <br>
-                            Service</a>
-                        <p class="text-slate-400 mt-3">46 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-presentation-line"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Software <br>
-                            Engineering</a>
-                        <p class="text-slate-400 mt-3">60 Jobs</p>
-                    </div>
-                </div><!--end content-->
+                @endforeach
             </div><!--end grid-->
         </div><!--end container-->
 
@@ -249,85 +184,17 @@
     <section class="relative bg-slate-50 dark:bg-slate-800 md:py-24 py-16">
         <div class="container">
             <div class="grid grid-cols-1 pb-8 text-center">
-                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Popular Jobs
+                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">LES ARTISAN
                 </h3>
 
                 <p class="text-slate-400 max-w-xl mx-auto">Search all the open positions on the web. Get your own
                     personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
             </div><!--end grid-->
 
-            <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 shadow hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 hover:-mt-2 rounded-md transition-all duration-500 h-fit">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div
-                                class="size-14 min-w-[56px] flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                                <img src="assets/images/company/facebook-logo.png" class="size-8" alt="">
-                            </div>
 
-                            <div class="ms-3">
-                                <a href="job-detail-three.html"
-                                    class="inline-block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500 me-1">Web
-                                    Designer</a>
-                                <span class="inline-block text-sm text-slate-400">2 days ago</span>
-                                <div>
-                                    <span
-                                        class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Full
-                                        Time</span>
-                                    <span class="text-sm font-medium inline-block me-1">Est. time: <span
-                                            class="text-slate-400">1 to 3 months</span></span>
-                                    <span class="text-sm font-medium inline-block me-1">Hourly: <span
-                                            class="text-slate-400">$16 - $20</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="text-slate-400 py-3">Looking for an experienced Web Designer for an our company.</p>
-
-                        <div>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">HTML</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">CSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SASS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SCSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Photoshop</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Graphics</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Bootstrap</span>
-                        </div>
-                    </div>
-
-                    <div class="px-6 py-2 bg-slate-50 dark:bg-slate-800 lg:flex justify-between items-center">
-                        <div class="lg:inline-block flex justify-between">
-                            <span class="inline-block me-1 font-semibold"><i
-                                    class="mdi mdi-check-decagram mdi-18px text-blue-500 me-1"></i>Verified</span>
-                            <ul class="list-none inline-block me-1 text-yellow-400 space-x-0.5">
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline text-slate-400 font-semibold">4.8</li>
-                            </ul>
-                            <span class="inline-block me-1 text-slate-400"><i
-                                    class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>Australia</span>
-                        </div>
-
-                        <a href="job-apply.html"
-                            class="btn btn-sm rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white md:ms-2 w-full lg:w-auto lg:mt-0 mt-4">Apply
-                            Now</a>
-                    </div>
-
-                    <a href="#"
-                        class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white absolute top-0 end-0 m-3"><i
-                            data-feather="bookmark" class="size-4"></i></a>
-                </div><!--end content-->
+            {{-- card de publication --}}
+            <x-card-publication ></x-card-publication>
+           <!--end content-->
 
                 <div
                     class="group relative overflow-hidden bg-white dark:bg-slate-900 shadow hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 hover:-mt-2 rounded-md transition-all duration-500 h-fit">
@@ -543,148 +410,6 @@
                             data-feather="bookmark" class="size-4"></i></a>
                 </div><!--end content-->
 
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 shadow hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 hover:-mt-2 rounded-md transition-all duration-500 h-fit">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div
-                                class="size-14 min-w-[56px] flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                                <img src="assets/images/company/spotify.png" class="size-8" alt="">
-                            </div>
-
-                            <div class="ms-3">
-                                <a href="job-detail-three.html"
-                                    class="inline-block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500 me-1">C++
-                                    Developer</a>
-                                <span class="inline-block text-sm text-slate-400">2 days ago</span>
-                                <div>
-                                    <span
-                                        class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Full
-                                        Time</span>
-                                    <span class="text-sm font-medium inline-block me-1">Est. time: <span
-                                            class="text-slate-400">1 to 3 months</span></span>
-                                    <span class="text-sm font-medium inline-block me-1">Hourly: <span
-                                            class="text-slate-400">$16 - $20</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="text-slate-400 py-3">Looking for an experienced Web Designer for an our company.</p>
-
-                        <div>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">HTML</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">CSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SASS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SCSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Photoshop</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Graphics</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Bootstrap</span>
-                        </div>
-                    </div>
-
-                    <div class="px-6 py-2 bg-slate-50 dark:bg-slate-800 lg:flex justify-between items-center">
-                        <div class="lg:inline-block flex justify-between">
-                            <span class="inline-block me-1 font-semibold"><i
-                                    class="mdi mdi-check-decagram mdi-18px text-blue-500 me-1"></i>Verified</span>
-                            <ul class="list-none inline-block me-1 text-yellow-400 space-x-0.5">
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline text-slate-400 font-semibold">4.8</li>
-                            </ul>
-                            <span class="inline-block me-1 text-slate-400"><i
-                                    class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>India</span>
-                        </div>
-
-                        <a href="job-apply.html"
-                            class="btn btn-sm rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white md:ms-2 w-full lg:w-auto lg:mt-0 mt-4">Apply
-                            Now</a>
-                    </div>
-
-                    <a href="#"
-                        class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white absolute top-0 end-0 m-3"><i
-                            data-feather="bookmark" class="size-4"></i></a>
-                </div><!--end content-->
-
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 shadow hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 hover:-mt-2 rounded-md transition-all duration-500 h-fit">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div
-                                class="size-14 min-w-[56px] flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                                <img src="assets/images/company/linkedin.png" class="size-8" alt="">
-                            </div>
-
-                            <div class="ms-3">
-                                <a href="job-detail-three.html"
-                                    class="inline-block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500 me-1">Php
-                                    Developer</a>
-                                <span class="inline-block text-sm text-slate-400">2 days ago</span>
-                                <div>
-                                    <span
-                                        class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Remote</span>
-                                    <span class="text-sm font-medium inline-block me-1">Est. time: <span
-                                            class="text-slate-400">1 to 3 months</span></span>
-                                    <span class="text-sm font-medium inline-block me-1">Hourly: <span
-                                            class="text-slate-400">$16 - $20</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="text-slate-400 py-3">Looking for an experienced Web Designer for an our company.</p>
-
-                        <div>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">HTML</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">CSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SASS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">SCSS</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Photoshop</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Graphics</span>
-                            <span
-                                class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Bootstrap</span>
-                        </div>
-                    </div>
-
-                    <div class="px-6 py-2 bg-slate-50 dark:bg-slate-800 lg:flex justify-between items-center">
-                        <div class="lg:inline-block flex justify-between">
-                            <span class="inline-block me-1 font-semibold"><i
-                                    class="mdi mdi-check-decagram mdi-18px text-blue-500 me-1"></i>Verified</span>
-                            <ul class="list-none inline-block me-1 text-yellow-400 space-x-0.5">
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                <li class="inline text-slate-400 font-semibold">4.8</li>
-                            </ul>
-                            <span class="inline-block me-1 text-slate-400"><i
-                                    class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>Pakistan</span>
-                        </div>
-
-                        <a href="job-apply.html"
-                            class="btn btn-sm rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white md:ms-2 w-full lg:w-auto lg:mt-0 mt-4">Apply
-                            Now</a>
-                    </div>
-
-                    <a href="#"
-                        class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white absolute top-0 end-0 m-3"><i
-                            data-feather="bookmark" class="size-4"></i></a>
-                </div><!--end content-->
             </div><!--end grid-->
 
             <div class="grid md:grid-cols-12 grid-cols-1 mt-8">
@@ -925,131 +650,7 @@
             </div><!--end grid-->
         </div><!--end container-->
 
-        <div class="container md:mt-24 mt-16">
-            <div class="grid grid-cols-1 pb-8 text-center">
-                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Latest Blog or
-                    News</h3>
-
-                <p class="text-slate-400 max-w-xl mx-auto">Search all the open positions on the web. Get your own
-                    personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
-            </div><!--end grid-->
-
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/blog/01.jpg"
-                            class="scale-110 group-hover:scale-100 transition-all duration-500" alt="">
-                    </div>
-
-                    <div class="relative p-6">
-                        <div class="absolute start-6 -top-4">
-                            <span
-                                class="bg-emerald-600 text-white text-[12px] px-2.5 py-1 font-semibold rounded-full h-5">Arts</span>
-                        </div>
-
-                        <div class="">
-                            <div class="flex mb-4">
-                                <span class="text-slate-400 text-sm"><i
-                                        class="uil uil-calendar-alt text-slate-900 dark:text-white me-2"></i>20th
-                                    February, 2023</span>
-                                <span class="text-slate-400 text-sm ms-3"><i
-                                        class="uil uil-clock text-slate-900 dark:text-white me-2"></i>5 min read</span>
-                            </div>
-
-                            <a href="blog-detail.html"
-                                class="title text-lg font-semibold hover:text-emerald-600 duration-500 ease-in-out">11
-                                Tips to Help You Get New Clients Through Cold Calling</a>
-
-                            <div class="flex justify-between items-center mt-3">
-                                <a href="blog-detail.html"
-                                    class="btn btn-link hover:text-emerald-600 after:bg-emerald-600 duration-500 ease-in-out">Read
-                                    More <i class="uil uil-arrow-right"></i></a>
-                                <span class="text-slate-400 text-sm">by <a href="#"
-                                        class="text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-600 font-medium">Google</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--end content-->
-
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/blog/02.jpg"
-                            class="scale-110 group-hover:scale-100 transition-all duration-500" alt="">
-                    </div>
-
-                    <div class="relative p-6">
-                        <div class="absolute start-6 -top-4">
-                            <span
-                                class="bg-emerald-600 text-white text-[12px] px-2.5 py-1 font-semibold rounded-full h-5">Illustration</span>
-                        </div>
-
-                        <div class="">
-                            <div class="flex mb-4">
-                                <span class="text-slate-400 text-sm"><i
-                                        class="uil uil-calendar-alt text-slate-900 dark:text-white me-2"></i>20th
-                                    February, 2023</span>
-                                <span class="text-slate-400 text-sm ms-3"><i
-                                        class="uil uil-clock text-slate-900 dark:text-white me-2"></i>5 min read</span>
-                            </div>
-
-                            <a href="blog-detail.html"
-                                class="title text-lg font-semibold hover:text-emerald-600 duration-500 ease-in-out">DigitalOcean
-                                launches first Canadian data centre in Toronto</a>
-
-                            <div class="flex justify-between items-center mt-3">
-                                <a href="blog-detail.html"
-                                    class="btn btn-link hover:text-emerald-600 after:bg-emerald-600 duration-500 ease-in-out">Read
-                                    More <i class="uil uil-arrow-right"></i></a>
-                                <span class="text-slate-400 text-sm">by <a href="#"
-                                        class="text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-600 font-medium">Facebook</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--end content-->
-
-                <div
-                    class="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/blog/03.jpg"
-                            class="scale-110 group-hover:scale-100 transition-all duration-500" alt="">
-                    </div>
-
-                    <div class="relative p-6">
-                        <div class="absolute start-6 -top-4">
-                            <span
-                                class="bg-emerald-600 text-white text-[12px] px-2.5 py-1 font-semibold rounded-full h-5">Music</span>
-                        </div>
-
-                        <div class="">
-                            <div class="flex mb-4">
-                                <span class="text-slate-400 text-sm"><i
-                                        class="uil uil-calendar-alt text-slate-900 dark:text-white me-2"></i>20th
-                                    February, 2023</span>
-                                <span class="text-slate-400 text-sm ms-3"><i
-                                        class="uil uil-clock text-slate-900 dark:text-white me-2"></i>5 min read</span>
-                            </div>
-
-                            <a href="blog-detail.html"
-                                class="title text-lg font-semibold hover:text-emerald-600 duration-500 ease-in-out">Using
-                                Banner Stands To Increase Trade Show Traffic</a>
-
-                            <div class="flex justify-between items-center mt-3">
-                                <a href="blog-detail.html"
-                                    class="btn btn-link hover:text-emerald-600 after:bg-emerald-600 duration-500 ease-in-out">Read
-                                    More <i class="uil uil-arrow-right"></i></a>
-                                <span class="text-slate-400 text-sm">by <a href="#"
-                                        class="text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-600 font-medium">Linkedin</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--end content-->
-            </div><!--end grid-->
-        </div><!--end container-->
+        
 
         <div class="container-fluid md:mt-24 mt-16">
             <div class="container">

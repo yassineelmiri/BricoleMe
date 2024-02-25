@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ArtisanRequest;
 use App\Models\artisan;
+use App\Models\Services;
+use App\Models\Profession;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,9 +18,12 @@ class ArtisanController extends Controller
      */
     public function index()
     {
-        return view('artisan.index');
+        $users = User::all();
+        $professions = Profession::all();
+        $services = Services::all();
+        return view('artisan.index',compact('users','professions','services'));
     }
-
+  
     /**
      * Show the form for creating a new resource.
      */
@@ -85,5 +91,7 @@ class ArtisanController extends Controller
             $formFields['image'] = $request->file('image')->store('profile', 'public');
         }
     }
+
+   
 
 }

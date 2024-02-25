@@ -4,8 +4,8 @@
         <div class="absolute inset-0 bg-emerald-900/90"></div>
         <div class="container">
             <div class="grid grid-cols-1 text-center mt-10">
-                <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Job
-                    Categories</h3>
+                <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">
+                    {{ $profession->name }}</h3>
 
             </div><!--end grid-->
         </div><!--end container-->
@@ -17,7 +17,7 @@
                     <a href="index.html">Jobstack</a>
                 </li>
                 <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white"
-                    aria-current="page">Job Categories</li>
+                    aria-current="page"></li>
             </ul>
         </div>
     </section><!--end section-->
@@ -34,146 +34,23 @@
     <!-- Start -->
     <section class="relative md:py-24 py-16">
         <div class="container">
-            <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
+
+                @foreach ($services as $service)
                     <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-gitlab"></i>
-                    </div>
+                        class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
+                        <div
+                            class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
+                            <i class="uil uil-book-open"></i>
+                        </div>
 
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Business <br>
-                            Development</a>
-                        <p class="text-slate-400 mt-3">74 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-book-open"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Marketing & <br>
-                            Communication</a>
-                        <p class="text-slate-400 mt-3">20 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-chart-pie-alt"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Project <br>
-                            Management</a>
-                        <p class="text-slate-400 mt-3">35 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-feedback"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Customer <br>
-                            Service</a>
-                        <p class="text-slate-400 mt-3">46 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-presentation-line"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Software <br>
-                            Engineering</a>
-                        <p class="text-slate-400 mt-3">60 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-gitlab"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Human Resource <br>
-                            HR</a>
-                        <p class="text-slate-400 mt-3">74 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-book-open"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">It & <br>
-                            Networking</a>
-                        <p class="text-slate-400 mt-3">20 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-chart-pie-alt"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Sales & <br>
-                            Marketing </a>
-                        <p class="text-slate-400 mt-3">35 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-feedback"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Project <br>
-                            Manager</a>
-                        <p class="text-slate-400 mt-3">46 Jobs</p>
-                    </div>
-                </div><!--end content-->
-
-                <div
-                    class="group px-3 py-10 rounded-md shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                    <div
-                        class="size-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-md text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                        <i class="uil uil-presentation-line"></i>
-                    </div>
-
-                    <div class="content mt-6">
-                        <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Data <br>
-                            Science</a>
-                        <p class="text-slate-400 mt-3">60 Jobs</p>
-                    </div>
-                </div><!--end content-->
+                        <div class="content mt-6">
+                            <a href="#" class="title text-lg font-semibold hover:text-emerald-600">
+                                {{ $service->skill }}</a>
+                            <p class="text-slate-400 mt-3">{{ $service->max_price }}$</p>
+                        </div>
+                    </div><!--end content-->
+                @endforeach
             </div><!--end grid-->
         </div><!--end container-->
 
@@ -215,9 +92,8 @@
                                         data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                                         aria-controls="accordion-collapse-body-1">
                                         <span>How does it work ?</span>
-                                        <svg data-accordion-icon class="size-4 rotate-180 shrink-0"
-                                            fill="currentColor" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg data-accordion-icon class="size-4 rotate-180 shrink-0" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                                 clip-rule="evenodd"></path>

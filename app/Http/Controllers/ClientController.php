@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\client;
+use App\Models\Profession;
+use App\Models\Service;
 use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,7 @@ class ClientController extends Controller
     // }
     public function index()
     {
-        return view('artisan.services.detail');
+        return view('client.show');
     }
 
     /**
@@ -42,10 +44,11 @@ class ClientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(client $client)
+    public function show()
     {
-        $client = client::all();
-        return view('client.show',compact('client'));
+        $profession = Profession::find(1);
+        $services = Service::all();
+        return view('client.select',compact('profession','services'));
     }
    
     /**

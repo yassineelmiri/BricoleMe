@@ -34,11 +34,11 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span
+                                    <a class="nav-link" href="#">Home <span
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('show.profile') }}"> client selection de service</a>
+                                    <a class="nav-link" href="{{ route('show.profission') }}"> client selection de service</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('client.index') }}">client</a>
@@ -48,7 +48,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact Us</a>
-                                </li>
+                                </li>                      
                             </ul>
                         </div>
                     </nav>
@@ -70,8 +70,8 @@
                                 Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic
                                 praesentium mollitia consequatur beatae, aspernatur culpa.
                             </p>
-                            <a href="">
-                                Contact Us
+                            <a href="{{ route('login.view') }}">
+                                Login
                             </a>
                         </div>
                     </div>

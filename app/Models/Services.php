@@ -14,7 +14,7 @@ class Services extends Model
     protected $fillable = [
         'skill',
         'max_price',
-        'price',
+        'profession',
 
     ];
 
