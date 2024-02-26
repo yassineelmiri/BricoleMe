@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('profession_id')->constrained('professions');
             $table->timestamps();
         });
-
     }
 
     /**
