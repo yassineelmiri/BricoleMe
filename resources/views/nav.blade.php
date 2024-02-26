@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -48,23 +47,18 @@
 
         <div class="flex-1 flex flex-wrap">
             <div class="p-2 bg-violet-200 w-full md:w-60 flex flex-col md:flex hidden" id="sideNav">
-                <nav><a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white "
-                        href="index">
+                <nav>
+                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white "
+                        href="{{ route('admin.stats') }}">
                         <i class="fas fa-home mr-2"></i>Statestiques
                     </a>
                     <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
-                        href="users">
-                        <i class="fas fa-users mr-2"></i>Clients
+                        href="{{ route('admin.claims') }}">
+                        <i class="fas fa-store mr-2"></i>claims
                     </a>
-
                     <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
-                        href="categories">
-                        <i class="fas fa-file-alt mr-2"></i>Workers
-                    </a>
-
-                    <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-indigo-300 hover:text-white"
-                        href="products">
-                        <i class="fas fa-store mr-2"></i>reservations
+                        href="{{ route('admin.requests') }}">
+                        <i class="fas fa-store mr-2"></i>professions requests
                     </a>
 
                 </nav>
@@ -76,72 +70,3 @@
 
 
             </div>
-
-            <div class="flex-1 p-4 w-full md:w-1/2">
-
-                <div class="mt-8 flex flex-wrap space-x-0 space-y-2 md:space-x-4 md:space-y-0">
-                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
-
-                        <h2 class="text-black text-lg font-semibold pb-1">users</h2>
-                        <div class="my-1"></div>
-                        <div class="bg-indigo-300 h-px mb-6"></div>
-                        <div class="flex">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4.333 6.764a3 3 0 1 1 3.141-5.023M2.5 16H1v-2a4 4 0 0 1 4-4m7.379-8.121a3 3 0 1 1 2.976 5M15 10a4 4 0 0 1 4 4v2h-1.761M13 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-4 6h2a4 4 0 0 1 4 4v2H5v-2a4 4 0 0 1 4-4Z" />
-                            </svg>
-                            <span class="py-2 px-8 bg-grey-lightest font-bold uppercase text-l text-grey-light ">
-
-                            </span>
-                            <h3
-                                class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-black border-b border-grey-light">
-                                Active users</h3>
-                        </div>
-                    </div>
-
-                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
-                        <h2 class="text-black text-lg font-semibold pb-1">Workers</h2>
-                        <div class="my-1"></div>
-                        <div class="bg-indigo-300 h-px mb-6"></div>
-                        <div class="flex">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                            <path
-                                d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                        </svg>
-                        <span class="py-2 px-16 bg-grey-lightest font-bold uppercase text-l text-grey-light ">
-
-                        </span>
-                        <h3
-                            class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-black border-b border-grey-light">
-                            Available workers</h3>
-</div>
-                    </div>
-
-                    <div class="flex-1 bg-violet-200 p-4 shadow rounded-lg md:w-1/2">
-                        <h2 class="text-black text-lg font-semibold pb-1">reservations</h2>
-                        <div class="my-1"></div>
-                        <div class="bg-indigo-300 h-px mb-6"></div>
-                        <div class="flex">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1"/>
-  </svg>
-                        <span class="py-2 px-10 bg-grey-lightest font-bold uppercase text-l text-grey-light ">
-
-                        </span>
-                        <h3
-                            class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-black border-b border-grey-light">
-                            Latest reservations</h3>
-
-                    </div></div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
