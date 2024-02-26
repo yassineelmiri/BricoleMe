@@ -35,6 +35,8 @@ Route::resource('client',ClientController::class);
 Route::resource('artisan',ArtisanController::class);
 
 Route::get('/profission',[TestController::class,'test'])->name('show.profession');
+Route::get('/ART',[TestController::class,'artisan'])->name('show.artisan');
+Route::get('/CLT',[TestController::class,'client'])->name('show.client');
 
 Route::get('/login',[AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
