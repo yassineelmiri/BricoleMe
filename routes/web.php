@@ -24,10 +24,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+
 })->name('home');
 Route::get('/Admin-Dash', function () {
     return view('admin-dashboard');
 });
+});
+Route::get('/Admin-stats', function () {
+    return view('admin-dashboard.admin-statestiques');
+})->name('admin.stats');
+
+Route::get('/Admin-requests', function () {
+    return view('admin-dashboard.admin-requests');
+})->name('admin.requests');
+
+Route::get('/Admin-claims', function () {
+    return view('admin-dashboard.admin-claims');
+})->name('admin.claims');
+
 
 Route::get('/artisan/detail',[TestController::class,'index'])->name('artisan.detail');
 
