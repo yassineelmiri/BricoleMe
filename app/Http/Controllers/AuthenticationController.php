@@ -22,7 +22,6 @@ class AuthenticationController extends Controller
     {
 
         $cache_key = 'cities';
-
         if(Cache::has($cache_key)){
             $cities = Cache::get($cache_key);
         }
@@ -33,8 +32,6 @@ class AuthenticationController extends Controller
             $cities = array_column($array_of_cities,'ville');
             Cache::put($cache_key,$cities);
         }
-
-
         $professions = Profession::all();
         return view('auth.artisan.register',[
             'professions' => $professions,

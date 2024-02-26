@@ -27,6 +27,7 @@
 </head>
 
 <body>
+
     <nav id="topnav" class="defaultscroll is-sticky">
         @include('partials.nav')
     </nav>
