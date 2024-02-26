@@ -38,18 +38,10 @@
                                 type="password" placeholder="Password"/>
                             <input
                                 class="w-full px-8  py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5"
-                                id= "pw"
+                                id= "confirm_pw"
                                 name="password"
                                 type="password" placeholder="Confirm Password"/>
 
-                            <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5">
-                                <option>Choose Your Profession</option>
-                                <option>Construction</option>
-                                <option>House Painting</option>
-                                <option>Electrician</option>
-                                <option>Plumber</option>
-
-                            </select>
 
                             <input
                                 class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5"
@@ -58,18 +50,17 @@
                                 name="phone_number"
                             />
 
-                            <select class="w-full px-8 mb-[1.5rem] py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5">
-                                <option>Choose Your City</option>
-                                <option>SAFI</option>
-                                <option>KECH</option>
-                                <option>CASABLANCA</option>
+                            <select id="city" class="mt-5 mb-[1.5rem] w-full px-8 h-[40px] rounded-lg font-medium bg-gray-100 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent">
+                                <option value="">Select Your City</option>
+                                @foreach($cities as $city)
+                                    <option value="{{$city}}">{{$city}}</option>
+                                @endforeach
                             </select>
 
-                            <footer class="flex justify-end px-8 pb-8 pt-4 gap-[10px]">
-                                <button  class="rounded-lg px-3 py-1 bg-indigo-500 hover:bg-indigo-400 text-white font-medium focus:shadow-outline focus:outline-none next">
+                            <footer class="flex justify-center px-8 pb-8 pt-4 ">
+                                <button  class="rounded-lg w-[30%] py-2 bg-indigo-500 hover:bg-indigo-400 text-white font-medium focus:shadow-outline focus:outline-none next">
                                     Register
                                 </button>
-
                             </footer>
 
 
@@ -92,6 +83,13 @@
 
 
 @endsection
+
+<script defer src="{{ asset('node_modules/nice-select2/dist/js/nice-select2.js') }}"></script>
+<script defer src="{{asset('js/customerRegister.js')}}"></script>
+
+
+
+
 
 
 
