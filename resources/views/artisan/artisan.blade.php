@@ -278,7 +278,7 @@
                                     <label>Select Services:</label><br>
                                     @foreach ($services as $service)
                                         <input type="checkbox" id="service_{{ $service->id }}" name="service_ids[]" value="{{ $service->id }}">
-                                        <label for="service_{{ $service->id }}">{{ $service->name }}  {{ $service->price }}</label><br>
+                                        <label for="service_{{ $service->id }}">{{ $service->name }}  ${{ $service->price }}</label><br>
                                     @endforeach
 
                                     <br>
