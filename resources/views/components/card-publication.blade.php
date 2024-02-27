@@ -7,24 +7,22 @@
                     class="size-14 min-w-[56px] flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
                     <img src="assets/images/team/08.jpg" class="size-8" alt="">
                 </div>
-
                 <div class="ms-3">
                     <a href="job-detail-three.html"
-                        class="inline-block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500 me-1">Nom de artisan</a>
-                    <span class="inline-block text-sm text-slate-400">2 days ago</span>
+                        class="inline-block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500 me-1">Nom de {{$user->name}}</a>
+                    <span class="inline-block text-sm text-slate-400">{{$user->id}} days ago</span>
                     <div>
                         <span
                             class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Full
                             Time</span>
-                        <span class="text-sm font-medium inline-block me-1">Est. time: <span class="text-slate-400">1 to
-                                3 months</span></span>
-                        <span class="text-sm font-medium inline-block me-1">Hourly: <span class="text-slate-400">$16 -
-                                $20</span></span>
+                        <span class="text-sm font-medium inline-block me-1">Est. time: <span class="text-slate-400">{{$user->created_at}}</span></span>
+                        <span class="text-sm font-medium inline-block me-1">city: <span class="text-slate-400">{{$user->city}}</span></span>
                     </div>
                 </div>
             </div>
 
             <p class="text-slate-400 py-3">Looking for an experienced Web Designer for an our company.</p>
+            <p class="text-slate-400 py-3">phone number : {{$user->phone_number}}</p>
 
             <div>
                 <span

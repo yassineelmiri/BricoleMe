@@ -24,20 +24,23 @@
                         <img src="assets/images/company/skype.png"
                             class="size-20 p-3 shadow dark:shadow-gray-700 rounded-md bg-slate-50 dark:bg-slate-800"
                             alt="">
-
-                        <div class="ms-4">
-                            <h5 class="text-xl font-bold">Skype</h5>
-                            <h6 class="text-base text-slate-400"><i class="uil uil-map-marker"></i> Canberra, Australia
+             
+                            <div class="ms-4">
+                            <h5 class="text-xl font-bold">{{ Auth::user()->name }}</h5>
+                            <h6 class="text-base text-slate-400"><i class="uil uil-map-marker"></i>
+                                {{ Auth::user()->city }}, Maroc
                             </h6>
+                            <p>: {{ Auth::user()->id }}</p>
+
                         </div>
                     </div>
 
                     <div class="md:mt-0 mt-4">
                         <a href="#"
-                            class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Follow</a>
+                            class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Follow
+                            </a>
                         <a href="#"
-                            class="btn btn-sm bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-1">See
-                            Jobs</a>
+                            class="btn btn-sm bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-1">inviter</a>
                     </div>
                 </div>
             </div><!--end grid-->
@@ -46,7 +49,7 @@
         <div class="container mt-12">
             <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
                 <div class="lg:col-span-8 md:col-span-7">
-                    <h5 class="text-xl font-semibold">Company Story</h5>
+                    <h5 class="text-xl font-semibold">Job : [{{ $Profession->name }}]</h5>
                     <p class="text-slate-400 mt-4">It is a long established fact that a reader will be distracted by the
                         readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
                         has a more-or-less normal distribution of letters, as opposed.</p>
@@ -70,65 +73,24 @@
                         </div>
                     </div>
 
-                    <h5 class="text-xl font-semibold mt-6">Vacancies:</h5>
+                    <h5 class="text-xl font-semibold mt-6">Les services :</h5>
 
                     <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-6">
-                        <div class="group relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                            <div class="p-6">
-                                <a href="#" class="title h5 text-lg font-semibold hover:text-emerald-600">Software
-                                    Engineering</a>
-                                <p class="text-slate-400 mt-2"><i class="uil uil-clock text-emerald-600"></i> Posted 3
-                                    Days ago</p>
 
-                                <div class="flex justify-between items-center mt-4">
-                                    <span
-                                        class="bg-emerald-600/5 text-emerald-600 text-xs font-bold px-2.5 py-0.5 rounded h-5">Full
-                                        Time</span>
-
-                                    <p class="text-slate-400"><i class="uil uil-usd-circle text-emerald-600"></i> $950 -
-                                        $1100/mo</p>
+                        @foreach ($services as $service)
+                            <div class="group relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
+                                <div class="flex items-center p-6 border-t border-gray-100 dark:border-gray-700">
+                                    <img src="assets/images/company/circle-logo.png"
+                                        class="size-12 shadow-md dark:shadow-gray-800 rounded-md p-2 bg-white dark:bg-slate-900"
+                                        alt="">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 font-semibold text-base">{{ $service->skill }}</h6>
+                                        <span class="text-slate-400 text-sm">{{ $service->max_price }} $</span>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="flex items-center p-6 border-t border-gray-100 dark:border-gray-700">
-                                <img src="assets/images/company/skype.png"
-                                    class="size-12 shadow-md dark:shadow-gray-800 rounded-md p-2 bg-white dark:bg-slate-900"
-                                    alt="">
-
-                                <div class="ms-3">
-                                    <h6 class="mb-0 font-semibold text-base">Skype</h6>
-                                    <span class="text-slate-400 text-sm">Australia</span>
-                                </div>
-                            </div>
-                        </div><!--end content-->
-
-                        <div class="group relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                            <div class="p-6">
-                                <a href="#" class="title h5 text-lg font-semibold hover:text-emerald-600">Web
-                                    Developer</a>
-                                <p class="text-slate-400 mt-2"><i class="uil uil-clock text-emerald-600"></i> Posted 3
-                                    Days ago</p>
-
-                                <div class="flex justify-between items-center mt-4">
-                                    <span
-                                        class="bg-emerald-600/5 text-emerald-600 text-xs font-bold px-2.5 py-0.5 rounded h-5">Remote</span>
-
-                                    <p class="text-slate-400"><i class="uil uil-usd-circle text-emerald-600"></i> $2500
-                                        - $2600/mo</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center p-6 border-t border-gray-100 dark:border-gray-700">
-                                <img src="assets/images/company/skype.png"
-                                    class="size-12 shadow-md dark:shadow-gray-800 rounded-md p-2 bg-white dark:bg-slate-900"
-                                    alt="">
-
-                                <div class="ms-3">
-                                    <h6 class="mb-0 font-semibold text-base">Skype</h6>
-                                    <span class="text-slate-400 text-sm">America</span>
-                                </div>
-                            </div>
-                        </div><!--end content-->
+                        @endforeach
+                        <!--end content-->
                     </div>
 
                     <div class="p-6 rounded-md shadow dark:shadow-gray-800 mt-8">
@@ -152,8 +114,8 @@
                                         <label for="email" class="font-semibold">Your Email:</label>
                                         <div class="form-icon relative mt-2">
                                             <i data-feather="mail" class="size-4 absolute top-3 start-4"></i>
-                                            <input name="email" id="email" type="email"
-                                                class="form-input ps-11" placeholder="Email :">
+                                            <input name="email" id="email" type="email" class="form-input ps-11"
+                                                placeholder="Email :">
                                         </div>
                                     </div>
                                 </div>
@@ -164,8 +126,7 @@
                                     <div class="text-start">
                                         <label for="comments" class="font-semibold">Your Comment:</label>
                                         <div class="form-icon relative mt-2">
-                                            <i data-feather="message-circle"
-                                                class="size-4 absolute top-3 start-4"></i>
+                                            <i data-feather="message-circle" class="size-4 absolute top-3 start-4"></i>
                                             <textarea name="comments" id="comments" class="form-input ps-11 h-28" placeholder="Message :"></textarea>
                                         </div>
                                     </div>
@@ -190,28 +151,28 @@
 
                         <ul class="list-none mt-4">
                             <li class="flex justify-between mt-2">
-                                <span class="text-slate-400 font-medium">Founded:</span>
-                                <span class="font-medium">2003</span>
+                                <span class="text-slate-400 font-medium">created Profile:</span>
+                                <span class="font-medium">{{ Auth::user()->created_at->format('Y') }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
-                                <span class="text-slate-400 font-medium">Founder:</span>
-                                <span class="font-medium">Niklas Zennström</span>
+                                <span class="text-slate-400 font-medium">phone number:</span>
+                                <span class="font-medium">{{ Auth::user()->phone_number }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
-                                <span class="text-slate-400 font-medium">Headquarters:</span>
-                                <span class="font-medium">Luxembourg</span>
+                                <span class="text-slate-400 font-medium">email:</span>
+                                <span class="font-medium">{{ Auth::user()->email }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">Number of employees:</span>
-                                <span class="font-medium">788</span>
+                                <span class="font-medium">50</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">Website:</span>
-                                <span class="font-medium">https://skype.com</span>
+                                <span class="font-medium">Null</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
@@ -244,12 +205,12 @@
                                 </ul><!--end icon-->
                             </li>
                         </ul>
-
+                      
                         <div class="mt-4 pt-2 border-t dark:border-t-gray-700">
                             <h5 class="text-lg font-semibold">Contact us</h5>
 
-                            <form method="post" action="{{ route('create.reservation') }}" name="myForm" id="myForm" class="mt-4"
-                                onsubmit="return validateForm()">
+                            <form method="post" action="{{ route('create.reservation') }}" name="myForm"
+                                id="myForm" class="mt-4" onsubmit="return validateForm()">
                                 @csrf
                                 <p class="mb-0" id="error-msg"></p>
                                 <div id="simple-msg"></div>
@@ -257,15 +218,13 @@
                                     <div>
                                         <label for="name2" class="font-semibold">client_id:</label>
                                         <input name="client_id" id="name2" type="text"
-                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                            >
+                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2">
                                     </div>
-                                    
+
                                     <div>
                                         <label for="name2" class="font-semibold">Time:</label>
                                         <input name="timing" id="name2" type="date"
-                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                            >
+                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2">
                                     </div>
 
                                     <div>
@@ -274,19 +233,20 @@
                                             class="form-input border border-slate-100 dark:border-slate-800 mt-2"
                                             placeholder="Email :">
                                     </div>
-
-                                    <label>Select Services:</label><br>
-                                    @foreach ($services as $service)
-                                        <input type="checkbox" id="service_{{ $service->id }}" name="service_ids[]" value="{{ $service->id }}">
-                                        <label for="service_{{ $service->id }}">{{ $service->name }}{{ $service->price }}</label><br>
-                                    @endforeach
-
+                                    <label for="services">Select Services:</label><br>
+                                    <select id="services" name="service_ids[]" multiple>
+                                        @foreach ($services as $service)
+                                            <option value="{{ $service->id }}">{{ $service->skill }} -
+                                                {{ $service->max_price }}</option>
+                                        @endforeach
+                                    </select>
                                     <br>
 
                                 </div>
-                                <button type="submit" id="submit2" 
-                                    class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">make reservation
-                                    </button>
+                                <button type="submit" id="submit2"
+                                    class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">make
+                                    reservation
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -381,10 +341,9 @@
                         <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
                             <div class="lg:col-span-8 md:col-span-7">
                                 <div class="md:text-start text-center relative z-1">
-                                    <h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Explore a job
-                                        now!</h3>
+                                    <h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Reclamation de Service!</h3>
                                     <p class="text-slate-400 max-w-xl">Search all the open positions on the web. Get
-                                        your own personalized salary estimate. Read reviews on over 30000+ companies
+                                        your own personalized salary estimate. Read reviews on over companies
                                         worldwide.</p>
                                 </div>
                             </div>
@@ -392,7 +351,7 @@
                             <div class="lg:col-span-4 md:col-span-5">
                                 <div class="text-end relative z-1">
                                     <a href="employer-detail.html"
-                                        class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Apply
+                                        class="btn bg-red-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Apply
                                         Now</a>
                                     <a href="aboutus.html"
                                         class="btn bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-2">Learn

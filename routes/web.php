@@ -54,7 +54,16 @@ Route::get('/artisan/detail', [TestController::class, 'index'])->name('artisan.d
 Route::resource('client', ClientController::class);
 Route::resource('artisan', ArtisanController::class);
 
-Route::get('/profission', [TestController::class, 'test'])->name('show.profession');
+
+// 
+Route::group(['middleware' => 'role:artisan'], function (){
+    Route::get('/ART',function (){
+        return to_route('show.artisan');
+    })->name('artisan.dashboard');
+});
+// 
+
+Route::get('/profission{id}', [TestController::class, 'test'])->name('show.profession');
 Route::get('/ART', [TestController::class, 'artisan'])->name('show.artisan');
 Route::get('/CLT', [TestController::class, 'client'])->name('show.client');
 Route::get('/edit', [TestController::class, 'edit'])->name('edit.artisan');
@@ -85,6 +94,8 @@ Route::get('/auth/facebook/user/data' ,[SocialMediaAuthController::class,'handle
 Route::get('/auth/register/type',[SocialMediaAuthController::class,'registerRedirect'])->name('auth.register.redirect');
 
 Route::post('/login',[AuthenticationController::class,'login'])->name('login');
+Route::get('/log-out',[AuthenticationController::class,'logout'])->name('log-out');
+
 Route::get('/login',[AuthenticationController::class,'loginPage'])->name('login.view');
 Route::get('/register/artisan',[AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
 Route::get('/register/customer',[AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
@@ -95,11 +106,7 @@ Route::post('/auth/artisan/register',[AuthenticationController::class,'artisanRe
 
 
 Route::get('/artisan/services',[ArtisanController::class,'services'])->name('artisan.services');
-Route::group(['middleware' => 'role:artisan'], function (){
-    Route::get('/artisan/dashboard',function (){
-        return view('artisan.index');
-    })->name('artisan.dashboard');
-});
+
 
 
 Route::group(['middleware' => 'role:customer'],function (){

@@ -190,9 +190,9 @@
             </div><!--end grid-->
 
 
-            {{-- card de publication --}}
-            <x-card-publication></x-card-publication>
-            <!--end content-->
+            @foreach ($users as $user)
+                <x-card-publication :user="$user" />
+            @endforeach
 
             <div
                 class="group relative overflow-hidden bg-white dark:bg-slate-900 shadow hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 hover:-mt-2 rounded-md transition-all duration-500 h-fit">

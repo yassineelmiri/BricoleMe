@@ -38,7 +38,7 @@
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo e(route('show.profession')); ?>"> client selection de service</a>
+                                    <a class="nav-link" href="<?php echo e(route('show.profession',Auth::user()->id)); ?>"> client selection de service</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo e(route('client.index')); ?>">client</a>
@@ -47,7 +47,7 @@
                                     <a class="nav-link" href="<?php echo e(route('artisan.index')); ?>">Artisan</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo e(route('show.artisan')); ?>">Artisan show</a>
+                                    
                                 </li>
                                 <li class="nav-item">
                                     
