@@ -231,7 +231,7 @@
                                         <span class="font-medium ms-2">calvin-carlo-resume.pdf</span>
                                     </div>
 
-                                    <a href="assets/images/calvin-carlo-resume.pdf" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md w-full" download><i class="uil uil-file-download-alt"></i> Download CV</a>
+                                    <a href="/invoice" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md w-full" download><i class="uil uil-file-download-alt"></i> Download CV</a>
                                 </li>
                             </ul>
                         </div>
