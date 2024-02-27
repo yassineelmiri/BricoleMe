@@ -137,4 +137,5 @@ body {
 .buttons button.cancel {
     background-color: #f56565;
     color: #fff;
+    margin-left: 0.00000000000001px;
 }
