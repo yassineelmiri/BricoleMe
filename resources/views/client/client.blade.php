@@ -29,8 +29,8 @@
                                     class="size-28 rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800"
                                     alt="">
                                 <div class="ms-4">
-                                    <h5 class="text-lg font-semibold">Mr. {{ Auth::user()->name }}</h5>
-                                    <p class="text-slate-400">#id : {{ Auth::user()->id }}</p>
+                                    <h5 class="text-lg font-semibold">Mr. {{ $client->name }}</h5>
+                                    <p class="text-slate-400">#id : {{ $client->id }}</p>
                                 </div>
                             </div>
 
@@ -208,7 +208,7 @@
                                     <span><i data-feather="mail" class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">Email :</span></span>
 
-                                    <span>{{ Auth::user()->email }}</span>
+                                    <span>{{ $client->email }}</span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span>
@@ -216,7 +216,7 @@
                                         <span class="text-slate-400 me-3">Member since :</span>
                                     </span>
                                     <span>
-                                        {{ now()->diffInDays(Auth::user()->created_at) }}
+                                        {{ now()->diffInDays($client->created_at) }}
                                     </span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
@@ -230,7 +230,7 @@
                                             class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">City :</span></span>
 
-                                    <span>{{ Auth::user()->city }}</span>
+                                    <span>{{ $client->city }}</span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="globe" class="size-4 text-slate-400 me-3 inline"></i><span
@@ -248,7 +248,7 @@
                                     <span><i data-feather="phone" class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">Mobile :</span></span>
 
-                                    <span>(+212) {{ Auth::user()->phone_number }}</span>
+                                    <span>(+212) {{ $client->phone_number }}</span>
                                 </li>
 
                                 <li class="flex justify-between mt-3">

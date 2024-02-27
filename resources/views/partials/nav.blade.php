@@ -49,12 +49,12 @@
                     onclick="event.stopPropagation();">
                     <ul class="py-2 text-start">
                         <li>
-                            <a href="{{ route('client.index') }}"
+                            <a href="{{ route('artisan.detail', Auth::user()->id) }}"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="user" class="size-4 me-2"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="{{ route('edit.artisan') }}"
+                            <a href="{{ route('edit.artisan',Auth::user()->id) }}"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="settings" class="size-4 me-2"></i>Settings</a>
                         </li>

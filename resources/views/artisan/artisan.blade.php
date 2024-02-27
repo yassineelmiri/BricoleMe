@@ -21,16 +21,15 @@
                 <div
                     class="md:flex justify-between items-center shadow dark:shadow-gray-700 rounded-md p-6 bg-white dark:bg-slate-900">
                     <div class="flex items-center">
-                        <img src="assets/images/company/skype.png"
+                        <img src="assets/images/team/04.jpg"
                             class="size-20 p-3 shadow dark:shadow-gray-700 rounded-md bg-slate-50 dark:bg-slate-800"
                             alt="">
-             
                             <div class="ms-4">
-                            <h5 class="text-xl font-bold">{{ Auth::user()->name }}</h5>
+                            <h5 class="text-xl font-bold">{{ $user->name }}</h5>
                             <h6 class="text-base text-slate-400"><i class="uil uil-map-marker"></i>
-                                {{ Auth::user()->city }}, Maroc
+                                {{ $user->city }}, Maroc
                             </h6>
-                            <p>: {{ Auth::user()->id }}</p>
+                            <p>{{ $Profession->name }}: {{ $user->id }}</p>
 
                         </div>
                     </div>
@@ -152,17 +151,17 @@
                         <ul class="list-none mt-4">
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">created Profile:</span>
-                                <span class="font-medium">{{ Auth::user()->created_at->format('Y') }}</span>
+                                <span class="font-medium">{{ $user->created_at->format('Y') }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">phone number:</span>
-                                <span class="font-medium">{{ Auth::user()->phone_number }}</span>
+                                <span class="font-medium">{{ $user->phone_number }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">email:</span>
-                                <span class="font-medium">{{ Auth::user()->email }}</span>
+                                <span class="font-medium">{{ $user->email }}</span>
                             </li>
 
                             <li class="flex justify-between mt-2">
@@ -236,8 +235,8 @@
                                     <label for="services">Select Services:</label><br>
                                     <select id="services" name="service_ids[]" multiple>
                                         @foreach ($services as $service)
-                                            <option value="{{ $service->id }}">{{ $service->skill }} -
-                                                {{ $service->max_price }}</option>
+                                            <option value="{{ $service->id }}">[{{ $service->skill }} ] -
+                                                {{ $service->max_price }}$</option>
                                         @endforeach
                                     </select>
                                     <br>

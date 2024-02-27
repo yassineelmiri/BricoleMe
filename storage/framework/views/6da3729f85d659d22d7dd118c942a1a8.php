@@ -30,16 +30,15 @@
                 <div
                     class="md:flex justify-between items-center shadow dark:shadow-gray-700 rounded-md p-6 bg-white dark:bg-slate-900">
                     <div class="flex items-center">
-                        <img src="assets/images/company/skype.png"
+                        <img src="assets/images/team/04.jpg"
                             class="size-20 p-3 shadow dark:shadow-gray-700 rounded-md bg-slate-50 dark:bg-slate-800"
                             alt="">
-             
                             <div class="ms-4">
-                            <h5 class="text-xl font-bold"><?php echo e(Auth::user()->name); ?></h5>
+                            <h5 class="text-xl font-bold"><?php echo e($user->name); ?></h5>
                             <h6 class="text-base text-slate-400"><i class="uil uil-map-marker"></i>
-                                <?php echo e(Auth::user()->city); ?>, Maroc
+                                <?php echo e($user->city); ?>, Maroc
                             </h6>
-                            <p>: <?php echo e(Auth::user()->id); ?></p>
+                            <p><?php echo e($Profession->name); ?>: <?php echo e($user->id); ?></p>
 
                         </div>
                     </div>
@@ -161,17 +160,17 @@
                         <ul class="list-none mt-4">
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">created Profile:</span>
-                                <span class="font-medium"><?php echo e(Auth::user()->created_at->format('Y')); ?></span>
+                                <span class="font-medium"><?php echo e($user->created_at->format('Y')); ?></span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">phone number:</span>
-                                <span class="font-medium"><?php echo e(Auth::user()->phone_number); ?></span>
+                                <span class="font-medium"><?php echo e($user->phone_number); ?></span>
                             </li>
 
                             <li class="flex justify-between mt-2">
                                 <span class="text-slate-400 font-medium">email:</span>
-                                <span class="font-medium"><?php echo e(Auth::user()->email); ?></span>
+                                <span class="font-medium"><?php echo e($user->email); ?></span>
                             </li>
 
                             <li class="flex justify-between mt-2">
@@ -245,8 +244,8 @@
                                     <label for="services">Select Services:</label><br>
                                     <select id="services" name="service_ids[]" multiple>
                                         <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option value="<?php echo e($service->id); ?>"><?php echo e($service->skill); ?> -
-                                                <?php echo e($service->max_price); ?></option>
+                                            <option value="<?php echo e($service->id); ?>">[<?php echo e($service->skill); ?> ] -
+                                                <?php echo e($service->max_price); ?>$</option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </select>
                                     <br>

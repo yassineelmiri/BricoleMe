@@ -38,8 +38,8 @@
                                     class="size-28 rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800"
                                     alt="">
                                 <div class="ms-4">
-                                    <h5 class="text-lg font-semibold">Mr. <?php echo e(Auth::user()->name); ?></h5>
-                                    <p class="text-slate-400">#id : <?php echo e(Auth::user()->id); ?></p>
+                                    <h5 class="text-lg font-semibold">Mr. <?php echo e($client->name); ?></h5>
+                                    <p class="text-slate-400">#id : <?php echo e($client->id); ?></p>
                                 </div>
                             </div>
 
@@ -217,7 +217,7 @@
                                     <span><i data-feather="mail" class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">Email :</span></span>
 
-                                    <span><?php echo e(Auth::user()->email); ?></span>
+                                    <span><?php echo e($client->email); ?></span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span>
@@ -225,7 +225,7 @@
                                         <span class="text-slate-400 me-3">Member since :</span>
                                     </span>
                                     <span>
-                                        <?php echo e(now()->diffInDays(Auth::user()->created_at)); ?>
+                                        <?php echo e(now()->diffInDays($client->created_at)); ?>
 
                                     </span>
                                 </li>
@@ -240,7 +240,7 @@
                                             class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">City :</span></span>
 
-                                    <span><?php echo e(Auth::user()->city); ?></span>
+                                    <span><?php echo e($client->city); ?></span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="globe" class="size-4 text-slate-400 me-3 inline"></i><span
@@ -258,7 +258,7 @@
                                     <span><i data-feather="phone" class="size-4 text-slate-400 me-3 inline"></i><span
                                             class="text-slate-400 me-3">Mobile :</span></span>
 
-                                    <span>(+212) <?php echo e(Auth::user()->phone_number); ?></span>
+                                    <span>(+212) <?php echo e($client->phone_number); ?></span>
                                 </li>
 
                                 <li class="flex justify-between mt-3">
