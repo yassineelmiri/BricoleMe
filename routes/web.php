@@ -59,6 +59,7 @@ Route::group(['middleware' => 'role:artisan'], function (){
     Route::get('/artisan/dashboard',function (){
         return view('artisan.index');
     })->name('artisan.dashboard');
+
 });
 
 

@@ -58,6 +58,9 @@ class User extends Authenticatable
     public function customer(){
         return $this->hasOne(Customer::class);
     }
+    public function admin(){
+        return $this->hasOne(Admin::class);
+    }
 
     public function is_artisan(){
         return $this->artisan()->exists();
@@ -67,4 +70,6 @@ class User extends Authenticatable
     {
       return $this->customer()->exists();
     }
+
+
 }
