@@ -10,6 +10,11 @@ use App\Http\Controllers\ReservationController;
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\InvoiceController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +34,7 @@ Route::get('/', function () {
 Route::get('/Admin-Dash', function () {
     return view('admin-dashboard');
 });
+
 
 Route::get('/Admin-stats', function () {
     return view('admin-dashboard.admin-statestiques');
@@ -108,5 +114,9 @@ Route::group(['middleware' => 'role:customer'],function (){
 
 Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
+
+
+
+Route::get('/invoice', [InvoiceController::class, 'generate']);
 
 
