@@ -14,7 +14,7 @@
             <ul class="breadcrumb tracking-[0.5px]  mb-0 inline-block">
                 <li
                     class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white">
-                    <a href="index.html">Jobstack01</a>
+                    <a href="index.html">JobstackJobstackJobstackJobstack</a>
                 </li>
                 <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white"
                     aria-current="page"></li>
