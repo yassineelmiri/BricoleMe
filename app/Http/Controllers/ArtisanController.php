@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ArtisanRequest;
 use App\Models\artisan;
+use App\Models\Services;
+use App\Models\Profession;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class ArtisanController extends Controller
 {
@@ -12,15 +18,18 @@ class ArtisanController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        $professions = Profession::all();
+        $services = Services::all();
+        return view('artisan.index',compact('users','professions','services'));
     }
-
+  
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('artisan.create');
     }
 
     /**
@@ -28,7 +37,11 @@ class ArtisanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formFields = $request->validated();
+        $formFields['password'] = Hash::make($request->password);
+        $this->uploadImage($request, $formFields);
+        artisan::create($formFields);
+        return redirect()->route('profiles.index')->with('success', 'votre Artisan est bien créé.');
     }
 
     /**
@@ -36,7 +49,8 @@ class ArtisanController extends Controller
      */
     public function show(artisan $artisan)
     {
-        //
+        $artisan = artisan::all();
+        return view('artisan.show',compact('artisan'));
     }
 
     /**
@@ -44,7 +58,10 @@ class ArtisanController extends Controller
      */
     public function edit(artisan $artisan)
     {
-        //
+        $this->authorize('update',$artisan);
+
+        return view('artisan.edit', compact('artisan'));
+
     }
 
     /**
@@ -52,7 +69,11 @@ class ArtisanController extends Controller
      */
     public function update(Request $request, artisan $artisan)
     {
-        //
+        $formFields = $request->validated();
+        $formFields['password'] = Hash::make($request->password);
+        $this->uploadImage($request, $formFields);
+        $artisan->fill($formFields)->save();
+        return to_route('artisan.show', $artisan->id)->with('success', 'Le artisan a élé bien Modification');
     }
 
     /**
@@ -63,9 +84,21 @@ class ArtisanController extends Controller
         $artisan->delete();
         return to_route('artisan.index')->with('success','Le artisan a ete bien supprimer ');
     }
+<<<<<<< HEAD
     public function services()
     {
         return view('artisan.services');
     }
+=======
+    private function uploadImage(ArtisanRequest $request, array &$formFields)
+    {
+        unset($formFields['image']);
+        if ($request->hasfile('image')) {
+            $formFields['image'] = $request->file('image')->store('profile', 'public');
+        }
+    }
+
+   
+>>>>>>> a379308da12ef8e34f1d7a473a7315d2b1def3e8
 
 }

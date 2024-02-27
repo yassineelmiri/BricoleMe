@@ -10,9 +10,9 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    public function Services():BelongsToMany
+    public function ServiceOfARtisan():BelongsToMany
     {
-        return $this->belongsToMany(Service::class)->using(ReservationOfService::class);
+        return $this->belongsToMany(ServiceOfArtisan::class)->using(ReservationOfService::class);
     }
 
     public function client(){
@@ -20,6 +20,9 @@ class Reservation extends Model
     }
 
     protected $fillable = [
+        'timing',
+        'description',
+        'status',
         'client_id',
 
     ];
