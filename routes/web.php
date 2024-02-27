@@ -58,7 +58,7 @@ Route::get('/register/artisan', [AuthenticationController::class, 'artisanRegist
 Route::get('/register/customer', [AuthenticationController::class, 'customerRegistrationPage'])->name('customer.register.view');
 Route::post('/auth/artisan/register', [AuthenticationController::class, 'artisanRegistration'])->name('artisan.register');
 
-Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
+Route::post('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 
 

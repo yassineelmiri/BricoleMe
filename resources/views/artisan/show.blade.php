@@ -248,45 +248,41 @@
                         <div class="mt-4 pt-2 border-t dark:border-t-gray-700">
                             <h5 class="text-lg font-semibold">Contact us</h5>
 
-                            <form method="post" action="{{ route('create.reservation') }}" name="myForm" id="myForm" class="mt-4"
+                            <form method="post" name="myForm" id="myForm" class="mt-4"
                                 onsubmit="return validateForm()">
-                                @csrf
                                 <p class="mb-0" id="error-msg"></p>
                                 <div id="simple-msg"></div>
                                 <div class="grid grid-cols-1 gap-2">
                                     <div>
-                                        <label for="name2" class="font-semibold">client_id:</label>
-                                        <input name="client_id" id="name2" type="text"
+                                        <label for="name2" class="font-semibold">Your Name:</label>
+                                        <input name="name" id="name2" type="text"
                                             class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                            >
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="name2" class="font-semibold">Time:</label>
-                                        <input name="timing" id="name2" type="date"
-                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                            >
+                                            placeholder="Name :">
                                     </div>
 
                                     <div>
-                                        <label for="email2" class="font-semibold">Description:</label>
-                                        <input name="description" id="email2" type="text"
+                                        <label for="email2" class="font-semibold">Your Email:</label>
+                                        <input name="email" id="email2" type="email"
                                             class="form-input border border-slate-100 dark:border-slate-800 mt-2"
                                             placeholder="Email :">
                                     </div>
 
-                                    <label>Select Services:</label><br>
-                                    @foreach ($services as $service)
-                                        <input type="checkbox" id="service_{{ $service->id }}" name="service_ids[]" value="{{ $service->id }}">
-                                        <label for="service_{{ $service->id }}">{{ $service->name }}  {{ $service->price }}</label><br>
-                                    @endforeach
+                                    <div>
+                                        <label for="subject" class="font-semibold">Your Question:</label>
+                                        <input name="subject" id="subject"
+                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2"
+                                            placeholder="Subject :">
+                                    </div>
 
-                                    <br>
-
+                                    <div>
+                                        <label for="comments2" class="font-semibold">Your Comment:</label>
+                                        <textarea name="comments" id="comments2"
+                                            class="form-input border border-slate-100 dark:border-slate-800 mt-2 textarea" placeholder="Message :"></textarea>
+                                    </div>
                                 </div>
-                                <button type="submit" id="submit2" 
-                                    class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">make reservation
-                                    </button>
+                                <button type="submit" id="submit2" name="send"
+                                    class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">Send
+                                    Message</button>
                             </form>
                         </div>
                     </div>

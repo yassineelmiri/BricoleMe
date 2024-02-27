@@ -11,15 +11,17 @@ class ReservationController extends Controller
 {
 
     public function create(Request $request){
-        $clientId = auth()->user()->client->id;
+        // $clientId = auth()->user()->client->id;
+
+        // dd($request->input('timing'));
         $serviceIds = $request->input('service_ids');
 
 
         $reservation = Reservation::create([
             'timing' => $request->input('timing'),
             'description' => $request->input('description'),
+            'client_id' => $request->input('client_id'),
             'status' => 'pending', 
-            'client_id' => $clientId,''
         ]);
 
         foreach ($serviceIds as $serviceId) {
