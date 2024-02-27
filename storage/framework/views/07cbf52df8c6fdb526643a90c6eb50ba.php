@@ -190,8 +190,7 @@
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="gift" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">Member since :</span></span>
-                                    <?php dd(Auth::user()); ?>
-                                    
+                                    <span><?php echo e(Auth::user()->created_at); ?></span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="home" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">Address :</span></span>

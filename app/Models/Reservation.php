@@ -20,10 +20,10 @@ class Reservation extends Model
     }
 
     protected $fillable = [
-        'date',
+        'timing',
         'description',
         'status',
-        'artisan_confirmation',
+        'client_id',
 
     ];
 }

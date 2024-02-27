@@ -2,34 +2,37 @@
 
 namespace App\Http\Controllers;
 use App\Models\client;
-use App\Models\Service;
 use App\Models\Reservation;
+use App\Models\ServiceOfArtisan;
 
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-    public function create(){
-        $clients = client::all();
-        $services=Service::all();
 
+    public function create(Request $request){
+        // $clientId = auth()->user()->client->id;
 
-        return view('reservation.create',compact('clients','services'));
-    }
+        // dd($request->input('timing'));
+        $serviceIds = $request->input('service_ids');
 
-    public function store(Request $request){
-        $request->validate([
-            'client_id'=>'required|exists:clients,id',
-            'services'=>'required|array',
-            'services.'=>'exists:services,id',
-        ]);
 
         $reservation = Reservation::create([
-            'client_id'=>$request->input('client_id'),
+            'timing' => $request->input('timing'),
+            'description' => $request->input('description'),
+            'client_id' => $request->input('client_id'),
+            'status' => 'pending', 
         ]);
 
-        $reservation->services()->attach($request->input('services'));
+        foreach ($serviceIds as $serviceId) {
+            $service = ServiceOfArtisan::find($serviceId);
+            $reservation->ServiceOfArtisan()->attach($service);
+        }
 
-        return redirect()->route('create.reservation')->with('success','Reservation created succesfully');
+        return redirect()->route('reservation.index')->with('success', 'Reservation created successfully!');
+
     }
 }
+
+
+
