@@ -54,7 +54,7 @@
                                     data-feather="user" class="size-4 me-2"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="candidate-profile-setting.html"
+                            <a href="{{ route('edit.artisan') }}"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="settings" class="size-4 me-2"></i>Settings</a>
                         </li>

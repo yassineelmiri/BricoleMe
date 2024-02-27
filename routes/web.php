@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\ClientController;
@@ -29,7 +28,7 @@ Route::get('/', function () {
 Route::get('/Admin-Dash', function () {
     return view('admin-dashboard');
 });
-});
+
 Route::get('/Admin-stats', function () {
     return view('admin-dashboard.admin-statestiques');
 })->name('admin.stats');
@@ -43,21 +42,21 @@ Route::get('/Admin-claims', function () {
 })->name('admin.claims');
 
 
-Route::get('/artisan/detail',[TestController::class,'index'])->name('artisan.detail');
+Route::get('/artisan/detail', [TestController::class, 'index'])->name('artisan.detail');
 
-Route::resource('client',ClientController::class);
-Route::resource('artisan',ArtisanController::class);
+Route::resource('client', ClientController::class);
+Route::resource('artisan', ArtisanController::class);
 
-Route::get('/profission',[TestController::class,'test'])->name('show.profession');
-Route::get('/ART',[TestController::class,'artisan'])->name('show.artisan');
-Route::get('/CLT',[TestController::class,'client'])->name('show.client');
-
-Route::get('/login',[AuthenticationController::class,'loginPage'])->name('login.view');
-Route::get('/register/artisan',[AuthenticationController::class,'artisanRegistrationPage'])->name('artisan.register.view');
-Route::get('/register/customer',[AuthenticationController::class,'customerRegistrationPage'])->name('customer.register.view');
-Route::post('/auth/artisan/register',[AuthenticationController::class,'artisanRegistration'])->name('artisan.register');
+Route::get('/profission', [TestController::class, 'test'])->name('show.profession');
+Route::get('/ART', [TestController::class, 'artisan'])->name('show.artisan');
+Route::get('/CLT', [TestController::class, 'client'])->name('show.client');
+Route::get('/edit', [TestController::class, 'edit'])->name('edit.artisan');
 
 
+Route::get('/login', [AuthenticationController::class, 'loginPage'])->name('login.view');
+Route::get('/register/artisan', [AuthenticationController::class, 'artisanRegistrationPage'])->name('artisan.register.view');
+Route::get('/register/customer', [AuthenticationController::class, 'customerRegistrationPage'])->name('customer.register.view');
+Route::post('/auth/artisan/register', [AuthenticationController::class, 'artisanRegistration'])->name('artisan.register');
 
 Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');

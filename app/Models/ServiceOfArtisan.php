@@ -18,5 +18,5 @@ class ServiceOfArtisan extends Model
         'price',
         '',
         '',
-    ]
+    ];
 }

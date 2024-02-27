@@ -27,6 +27,10 @@ class TestController extends BaseController
     {
         return view('client.client');
     }
+    public function edit()
+    {
+        return view('artisan.edit');
+    }
     
 
 }
