@@ -29,7 +29,7 @@ Route::get('/', function () {
 Route::get('/Admin-Dash', function () {
     return view('admin-dashboard');
 });
-});
+
 Route::get('/Admin-stats', function () {
     return view('admin-dashboard.admin-statestiques');
 })->name('admin.stats');
@@ -59,4 +59,6 @@ Route::post('/auth/artisan/register',[AuthenticationController::class,'artisanRe
 
 Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
+
+
 

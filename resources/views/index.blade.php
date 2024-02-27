@@ -38,7 +38,7 @@
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('show.profission') }}"> client selection de service</a>
+                                    <a class="nav-link" href="{{ route('show.profession') }}"> client selection de service</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('client.index') }}">client</a>
