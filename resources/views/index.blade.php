@@ -47,6 +47,12 @@
                                     <a class="nav-link" href="{{ route('artisan.index') }}">Artisan</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('show.artisan') }}">Artisan show</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('show.client') }}">client show</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact Us</a>
                                 </li>                      
                             </ul>

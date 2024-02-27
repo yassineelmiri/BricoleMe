@@ -82,7 +82,7 @@
 
 
     <div class="w-[100vw] h-[100vh] flex mx-auto flex-col gap-[1rem] justify-center items-center hidden" id="register_page_two">
-        <div id="validation_msg" class="relative w-[40%] flex justify-center items-center rounded-lg h-[40px] bg-green-500 text-white font-medium hidden">
+        <div id="validation_msg" class="relative w-[30%] flex justify-center items-center rounded-lg h-[50px] bg-green-500 text-white font-medium hidden">
             <p>Registration made successfully ! Please Log In </p>
         </div>
         <section class="sm:w-[100%] h-[100vh] lg:bg-slate-100 lg:w-[70%] lg:h-[80vh] lg:rounded-xl flex justify-center items-center">
@@ -134,5 +134,4 @@
 
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer src="{{ asset('node_modules/nice-select2/dist/js/nice-select2.js') }}"></script>
-
 <script defer src="{{asset('js/register.js')}}"></script>

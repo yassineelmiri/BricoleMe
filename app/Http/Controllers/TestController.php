@@ -6,6 +6,8 @@ use App\Models\Profession;
 use App\Models\Services;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use App\Models\ServiceOfArtisan;
+
 use Illuminate\Routing\Controller as BaseController;
 
 class TestController extends BaseController
@@ -19,10 +21,22 @@ class TestController extends BaseController
         return view('client.select', compact('profession', 'services'));
     }
     
-    // public function index()
-    // {
-    // return $this->test();  
-    // }
+    public function artisan()
+    {
+        $services = ServiceOfArtisan::all(); 
+        return view('artisan.artisan', compact('services'));
+    }
+    public function client()
+    {
+        return view('client.client');
+    }
+    public function edit()
+    {
+        return view('artisan.edit');
+    }
+
+
+
     
 
 }
