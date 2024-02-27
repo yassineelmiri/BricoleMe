@@ -12,7 +12,7 @@ class ReservationOfService extends Pivot
 
     protected $filable = [
         '',
-    ]
+    ];
 
     
 }

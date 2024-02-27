@@ -19,10 +19,18 @@ class TestController extends BaseController
         return view('client.select', compact('profession', 'services'));
     }
     
-    // public function index()
-    // {
-    // return $this->test();  
-    // }
+    public function artisan()
+    {
+        return view('artisan.artisan');
+    }
+    public function client()
+    {
+        return view('client.client');
+    }
+    public function edit()
+    {
+        return view('artisan.edit');
+    }
     
 
 }
