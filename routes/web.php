@@ -103,8 +103,9 @@ Route::group(['middleware' => 'role:artisan'], function (){
 
 
 Route::group(['middleware' => 'role:customer'],function (){
-    Route::get('/customer/dashboard',function (){
-        return view('client.index');
+    Route::get('/CLT',function (){
+       
+        return view('client.client');
     })->name('customer.dashboard');
 });
 
