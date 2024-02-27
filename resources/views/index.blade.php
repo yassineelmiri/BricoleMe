@@ -74,8 +74,8 @@
           </div>
         </div>
       </section>
-    
-    
+
+
       <section class="about_section layout_padding-bottom">
         <div class="container">
           <div class="row">
@@ -125,11 +125,11 @@
           </div>
         </div>
       </section>
-    
+
       <!-- end professional section -->
-    
+
       <!-- service section -->
-    
+
       <section class="service_section layout_padding">
         <div class="container ">
           <div class="heading_container heading_center">
@@ -192,8 +192,8 @@
           </div>
         </div>
       </section>
-    
-    
+
+
       <section class="client_section ">
         <div class="container">
           <div class="heading_container heading_center effect">

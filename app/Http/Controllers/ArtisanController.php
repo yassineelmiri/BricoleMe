@@ -63,5 +63,9 @@ class ArtisanController extends Controller
         $artisan->delete();
         return to_route('artisan.index')->with('success','Le artisan a ete bien supprimer ');
     }
+    public function services()
+    {
+        return view('artisan.services');
+    }
 
 }

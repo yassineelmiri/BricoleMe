@@ -104,7 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             container.appendChild(div);
                             deleteBtn.addEventListener('click', function() {
+                                const index = this.dataset.index;
+                                files.splice(index, 1);
                                 container.removeChild(div);
+
                             });
 
                         };
@@ -141,13 +144,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         data : formData,
                         success : function (response){
-                            document.getElementById('validation_msg').classList.remove('hidden');
 
-                            setTimeout(function (){
-                                $('#validation_msg').fadeOut();
+                                document.getElementById('validation_msg').classList.remove('hidden');
 
-                            },2000);
-                            window.location.href = 'http://localhost/login';
+                                setTimeout(function (){
+                                    $('#validation_msg').fadeOut();
+
+                                },2500);
+
+                                window.location.href = 'http://localhost/login';
+
                         }
                     })
                 })

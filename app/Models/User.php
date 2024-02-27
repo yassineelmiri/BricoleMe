@@ -22,7 +22,9 @@ class User extends Authenticatable
         'email',
         'password',
         'city',
-        'phone_number'
+        'phone_number',
+        'social_provider_id',
+        'social_type'
     ];
 
     /**
@@ -48,8 +50,21 @@ class User extends Authenticatable
     public function artisan()
     {
         return $this->hasOne(Artisan::class);
+    }
     public function client(){
         return $this->hasMany(client::class);
+    }
 
+    public function customer(){
+        return $this->hasOne(Customer::class);
+    }
+
+    public function is_artisan(){
+        return $this->artisan()->exists();
+    }
+
+    public function is_customer()
+    {
+      return $this->customer()->exists();
     }
 }
