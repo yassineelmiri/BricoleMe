@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('professions', function (Blueprint $table) {
+        Schema::create('services_of_artisans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->softDeletes();
+            $table->string('price');
+            $table->foreignId('artisan_id')->constrained('artisans');
+            $table->foreignId('service_id')->constrained('services');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('professions');
+        Schema::dropIfExists('service_of_artisans');
     }
 };

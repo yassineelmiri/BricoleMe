@@ -26,8 +26,8 @@
                             <div class="relative flex items-end">
                                 <img src="assets/images/team/01.jpg" class="size-28 rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" alt="">
                                 <div class="ms-4">
-                                    <h5 class="text-lg font-semibold">Mr. Calvin carlo</h5>
-                                    <p class="text-slate-400">Web Designer</p>
+                                    <h5 class="text-lg font-semibold">Mr. {{Auth::user()->name}}</h5>
+                                    <p class="text-slate-400">#id : {{ Auth::user()->id}}</p>
                                 </div>
                             </div>
     
@@ -112,8 +112,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <h4 class="mt-6 text-xl font-semibold">Experience :</h4>
+                        <h4 class="mt-6 text-xl font-semibold">Les Services :</h4>
 
                         <div class="flex mt-6">
                             <div class="text-slate-400 font-semibold min-w-[80px] text-center">
@@ -178,12 +177,11 @@
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="mail" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">Email  :</span></span>
                                     
-                                    <span>thomas@mail.com</span>
+                                    <span>{{Auth::user()->email}}</span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
-                                    <span><i data-feather="gift" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">D.O.B. :</span></span>
-                                    
-                                    <span>31st Dec, 1996</span>
+                                    <span><i data-feather="gift" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">Member since :</span></span>
+                                    <span>{{Auth::user()->created_at}}</span>
                                 </li>
                                 <li class="flex justify-between mt-3 items-center font-medium">
                                     <span><i data-feather="home" class="size-4 text-slate-400 me-3 inline"></i><span class="text-slate-400 me-3">Address :</span></span>
