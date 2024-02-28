@@ -4,19 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Reservation extends Model
 {
     use HasFactory;
 
-    public function ServiceOfARtisan():BelongsToMany
+    public function serviceOfArtisan(): BelongsToMany
     {
-        return $this->belongsToMany(ServiceOfArtisan::class)->using(ReservationOfService::class);
+        return $this->belongsToMany(ServiceOfArtisan::class)
+            ->using(ReservationOfService::class)
+            ->withPivot('id') 
+            ->onDelete('cascade');
     }
 
     public function client(){
-        return $this->belongsToOne(client::class);
+        return $this->belongsTo(client::class);
     }
 
     protected $fillable = [
