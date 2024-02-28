@@ -6,7 +6,7 @@
     </div>
 
     <div class="content mt-6">
-        <a href="{{ route('show.profession') }}" class="title text-lg font-semibold hover:text-emerald-600">Job <br>{{$profession->name}}</a>
+        <a href="{{ route('show.profession',$profession->id) }}" class="title text-lg font-semibold hover:text-emerald-600">Job <br>{{$profession->name}}</a>
         <p class="text-slate-400 mt-3">#{{$profession->id}}</p>
     </div>
 </div>

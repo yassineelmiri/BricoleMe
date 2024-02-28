@@ -3,25 +3,25 @@
 <?php if(!empty($social_provider_id)): ?>
     <?php $__env->startSection('content'); ?>
         <div class="w-[100vw] h-[100vh] flex mx-auto justify-center items-center flex-col gap-[1rem]" id="register_page_one">
-            <?php if (isset($component)) { $__componentOriginal47a245a75a96c9babd2268219857781d = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal47a245a75a96c9babd2268219857781d = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.errors','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+            <?php if (isset($component)) { $__componentOriginale4d25700aa2f7fb7dc1d4497a8c12420 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginale4d25700aa2f7fb7dc1d4497a8c12420 = $attributes; } ?>
+<?php $component = App\View\Components\Errors::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('errors'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\Errors::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__attributesOriginal47a245a75a96c9babd2268219857781d)): ?>
-<?php $attributes = $__attributesOriginal47a245a75a96c9babd2268219857781d; ?>
-<?php unset($__attributesOriginal47a245a75a96c9babd2268219857781d); ?>
+<?php if (isset($__attributesOriginale4d25700aa2f7fb7dc1d4497a8c12420)): ?>
+<?php $attributes = $__attributesOriginale4d25700aa2f7fb7dc1d4497a8c12420; ?>
+<?php unset($__attributesOriginale4d25700aa2f7fb7dc1d4497a8c12420); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal47a245a75a96c9babd2268219857781d)): ?>
-<?php $component = $__componentOriginal47a245a75a96c9babd2268219857781d; ?>
-<?php unset($__componentOriginal47a245a75a96c9babd2268219857781d); ?>
+<?php if (isset($__componentOriginale4d25700aa2f7fb7dc1d4497a8c12420)): ?>
+<?php $component = $__componentOriginale4d25700aa2f7fb7dc1d4497a8c12420; ?>
+<?php unset($__componentOriginale4d25700aa2f7fb7dc1d4497a8c12420); ?>
 <?php endif; ?>
 
             <section class="sm:w-[100%] h-[100vh] lg:bg-slate-100 lg:w-[70%] lg:h-[80vh] lg:rounded-xl">
