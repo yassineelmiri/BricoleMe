@@ -84,8 +84,8 @@
                     <h5 class="text-xl font-semibold mt-6">Les services :</h5>
 
                     <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-6">
-
                         <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
                             <div class="group relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
                                 <div class="flex items-center p-6 border-t border-gray-100 dark:border-gray-700">
                                     <img src="assets/images/company/circle-logo.png"

@@ -60,7 +60,7 @@ Route::resource('artisan', ArtisanController::class);
 Route::group(['middleware' => 'role:artisan'], function () {
     Route::get('/ART', function () {
 
-        return to_route('show.artisan',Auth::user()->id);
+        return to_route('show.artisan', Auth::user()->id);
     })->name('artisan.dashboard');
 });
 // 
@@ -69,6 +69,7 @@ Route::get('/profission{id}', [TestController::class, 'test'])->name('show.profe
 Route::get('/ART{id}', [TestController::class, 'artisan'])->name('show.artisan');
 Route::get('/CLT', [TestController::class, 'client'])->name('show.client');
 Route::get('/Modifier{edit}', [TestController::class, 'edit'])->name('edit.artisan');
+Route::put('/ART', [TestController::class, 'update'])->name('update.artisan');
 
 
 Route::get('/login', [AuthenticationController::class, 'loginPage'])->name('login.view');
