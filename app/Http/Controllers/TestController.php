@@ -50,9 +50,7 @@ class TestController extends BaseController
         return view('artisan.edit', compact('client'));
     }
     public function update(Request $request, User $user)
-    {
-
-        
+    {       
         $formFields = $request->validate([
             'name'=>'required',
             'email'=>'required|email',
