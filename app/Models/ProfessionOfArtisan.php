@@ -12,5 +12,5 @@ class ProfessionOfArtisan extends Model
     protected $filable =[
         '',
         '',
-    ]
+    ];
 }

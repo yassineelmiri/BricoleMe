@@ -31,4 +31,17 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+
+    'google' => [
+        'client_id' => '220294548164-copiq0grnqhtgmcfg5sqtnah84onj7qn.apps.googleusercontent.com',
+        'client_secret' => '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' ,
+        'redirect' => 'http://localhost/auth/google/user/data'
+    ],
+
+    'facebook' => [
+        'client_id' => '2114206515609445',
+        'client_secret' => '7cc4b7148dedfb94be485f67d22eac04' ,
+        'redirect' => 'https://76e4-197-230-250-154.ngrok-free.app/auth/facebook/user/data'
+    ]
+
 ];
