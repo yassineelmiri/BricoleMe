@@ -22,11 +22,11 @@ class ArtisanController extends Controller
 {
     $artisans = Artisan::all();
     $users = []; 
-    $services = []; 
 
     foreach ($artisans as $artisan) {
         $users[] = User::where('id', $artisan->user_id)->first();
     }
+    
     $professions = Profession::all();
     $services = Services::all();
 

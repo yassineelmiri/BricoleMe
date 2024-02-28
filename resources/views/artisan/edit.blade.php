@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="ms-4">
-                            <h5 class="text-lg font-semibold">Mr. {{$client->name}}</h5>
+                            <h5 class="text-lg font-semibold">Mr. {{ $client->name }}</h5>
                             <p class="text-slate-400">Web Designer</p>
                         </div>
                     </div>
@@ -40,50 +40,61 @@
                 <div class="lg:col-span-12">
                     <div class="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
                         <h5 class="text-lg font-semibold mb-4">Personal Detail :</h5>
-                        <form>
+                        <form method="POST" action="{{ route('update.artisan', $client->id) }}">
+                            @csrf
+                            @method('PUT')
                             <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 gap-4">
                                 <div class="lg:col-span-6">
                                     <label class="form-label font-medium"> Name : <span
                                             class="text-red-600">*</span></label>
                                     <input type="text"
                                         class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                        placeholder="Name: {{$client->name}}" id="firstname" name="name" required="">
+                                        placeholder="Name: {{ $client->name }}" id="firstname" name="name"
+                                        required="">
                                 </div>
                                 <div class="lg:col-span-6">
                                     <label class="form-label font-medium">Your Email : <span
                                             class="text-red-600">*</span></label>
                                     <input type="email"
                                         class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                        placeholder="Email : {{$client->email}}" name="email" required="">
+                                        placeholder="Email : {{ $client->email }}" name="email" required="">
                                 </div>
 
                                 <div class="lg:col-span-6">
                                     <label class="form-label font-medium" for="birthday">Date of Birth :</label>
-                                    <input type="date" id="birthday" name="birthday"
+                                    <input type="date" id="birthday"
                                         class="form-input border border-slate-100 dark:border-slate-800 mt-2">
                                 </div>
 
                                 <div class="lg:col-span-4">
-                                    <label class="form-label font-medium">Your Address :</label>
+                                    <label class="form-label font-medium">Your City :</label>
                                     <input type="address"
                                         class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                        placeholder="city : {{$client->city}}" name="address" required="">
+                                        placeholder="city : {{ $client->city }}" name="city" required="">
                                 </div>
 
                                 <div class="lg:col-span-3">
-                                    <label class="form-label font-medium">Job :</label>
-                                    <select
-                                        class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-2">
-                                        <option value="NY">New York</option>
-                                        <option value="MC">North Carolina</option>
-                                        <option value="SC">South Carolina</option>
-                                    </select>
+                                    <label class="form-label font-medium">Professions :</label><br>
+                                    <input type="checkbox" id="electrician" name="Professions[]" value="electrician">
+                                    <label for="electrician">Electrician</label><br>
+                                    <input type="checkbox" id="plumber" name="Professions[]" value="plumber">
+                                    <label for="plumber">Plumber</label><br>
+                                    <input type="checkbox" id="woodmaker" name="Professions[]" value="woodmaker">
+                                    <label for="woodmaker">Woodmaker</label><br>
+                                    <input type="checkbox" id="construction" name="Professions[]" value="construction">
+                                    <label for="construction">Construction</label><br>
+                                    <input type="checkbox" id="blacksmith" name="Professions[]" value="blacksmith">
+                                    <label for="blacksmith">Blacksmith</label><br>
                                 </div>
+
+
+
                                 <div class="lg:col-span-6">
                                     <label class="form-label font-medium">Mobile No. :</label>
                                     <input type="number"
                                         class="form-input border border-slate-100 dark:border-slate-800 mt-2"
-                                        placeholder="Mobile {{$client->phone_number}}" name="number" required="">
+                                        placeholder="Mobile {{ $client->phone_number }}" name="phone_number"
+                                        required="">
                                 </div>
                                 <div class="lg:col-span-6">
                                     <label class="form-label font-medium" for="multiple_files">Upload image:</label>
@@ -96,12 +107,12 @@
                             <div class="grid grid-cols-1">
                                 <div class="mt-5">
                                     <label class="form-label font-medium">Intro : </label>
-                                    <textarea name="comments" id="comments"
-                                        class="form-input border border-slate-100 dark:border-slate-800 mt-2 textarea" placeholder="Demande de modifier Profile par admin :"></textarea>
+                                    <textarea id="comments" class="form-input border border-slate-100 dark:border-slate-800 mt-2 textarea"
+                                        placeholder="Demande de modifier Profile par admin :"></textarea>
                                 </div>
                             </div><!--end row-->
 
-                            <input type="submit" id="submit" name="send"
+                            <input type="submit" id="submit" name="submit"
                                 class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md mt-5"
                                 value="send Changes">
                         </form><!--end form-->

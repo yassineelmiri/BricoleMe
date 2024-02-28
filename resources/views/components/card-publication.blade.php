@@ -27,9 +27,14 @@
             <p class="text-slate-400 py-3">phone number : {{ $user->phone_number }}</p>
 
             <div>
-                <span
-                    class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Electrical
-                    Installation'</span>
+                
+
+                {{-- @foreach ($services as $service)
+                    @if ($service->profession_id === $profession->id)
+                        <span
+                            class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">{{ $service->skill }}</span>
+                    @endif
+                @endforeach --}}
                 <span
                     class="bg-slate-100 dark:bg-slate-800 inline-block text-slate-900 dark:text-slate-300 text-xs px-2.5 py-0.5 font-semibold rounded-full me-1">Fixture
                     Installation</span>
@@ -44,6 +49,7 @@
                 <span class="inline-block me-1 font-semibold"><i
                         class="mdi mdi-check-decagram mdi-18px text-blue-500 me-1"></i>Verified</span>
                 <ul class="list-none inline-block me-1 text-yellow-400 space-x-0.5">
+
                     <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
                     <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
                     <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
@@ -55,12 +61,12 @@
                         class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>Maroc</span>
             </div>
 
-            <a href="{{ route('show.artisan',$user->id) }}"
+            <a href="{{ route('show.artisan', $user->id) }}"
                 class="btn btn-sm rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white md:ms-2 w-full lg:w-auto lg:mt-0 mt-4">voir
                 détail</a>
         </div>
 
-        <a href="{{ route('show.artisan',$user->id) }}"
+        <a href="{{ route('show.artisan', $user->id) }}"
             class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white absolute top-0 end-0 m-3"><i
                 data-feather="bookmark" class="size-4"></i></a>
     </div>
