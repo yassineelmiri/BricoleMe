@@ -3,7 +3,17 @@
 @section('title','Customer Registration')
 
 @section('content')
-    <div class="w-[100vw] h-[100vh] flex mx-auto justify-center items-center " id="register_page_one">
+    <div class="w-[100vw] h-[100vh] flex flex-col gap-[1rem] mx-auto justify-center items-center " id="register_page_one">
+        @if ($errors->any())
+            <div class="w-[50%] bg-red-300 font-medium text-red-700 rounded-lg px-[2.5%] py-[0.5rem]">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <section class="sm:w-[100%] h-[100vh] lg:bg-slate-100 lg:w-[70%] lg:h-[80vh] lg:rounded-xl">
             <div class="container h-full px-6 py-24">
                 <div
@@ -16,12 +26,12 @@
                     </div>
 
                     <div class="md:w-8/12 lg:ml-6 lg:w-5/12">
-                        <form>
+                        <form action="{{route('customer.register')}}" method="POST">
+                            @csrf
                             <input
                                 class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent"
                                 type="text" placeholder="Username"
-                                id= "username"
-                                name="username"
+                                name="name"
                             />
 
                             <input
@@ -36,20 +46,11 @@
                                 id= "pw"
                                 name="password"
                                 type="password" placeholder="Password"/>
+
                             <input
                                 class="w-full px-8  py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5"
-                                id= "pw"
-                                name="password"
+                                name="confirm_password"
                                 type="password" placeholder="Confirm Password"/>
-
-                            <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5">
-                                <option>Choose Your Profession</option>
-                                <option>Construction</option>
-                                <option>House Painting</option>
-                                <option>Electrician</option>
-                                <option>Plumber</option>
-
-                            </select>
 
                             <input
                                 class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5"
@@ -58,18 +59,17 @@
                                 name="phone_number"
                             />
 
-                            <select class="w-full px-8 mb-[1.5rem] py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent mt-5">
-                                <option>Choose Your City</option>
-                                <option>SAFI</option>
-                                <option>KECH</option>
-                                <option>CASABLANCA</option>
+                            <select id="city" name="city" class="mt-5 mb-[1.5rem] w-full px-8 h-[40px] rounded-lg font-medium bg-gray-100 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-transparent">
+                                <option value="">Select Your City</option>
+                                @foreach($cities as $city)
+                                    <option value="{{$city}}">{{$city}}</option>
+                                @endforeach
                             </select>
 
-                            <footer class="flex justify-end px-8 pb-8 pt-4 gap-[10px]">
-                                <button  class="rounded-lg px-3 py-1 bg-indigo-500 hover:bg-indigo-400 text-white font-medium focus:shadow-outline focus:outline-none next">
+                            <footer class="flex justify-center px-8 pb-8 pt-4 ">
+                                <button type="submit" class="rounded-lg w-[30%] py-2 bg-indigo-500 hover:bg-indigo-400 text-white font-medium focus:shadow-outline focus:outline-none next">
                                     Register
                                 </button>
-
                             </footer>
 
 
@@ -92,6 +92,13 @@
 
 
 @endsection
+
+<script defer src="{{ asset('node_modules/nice-select2/dist/js/nice-select2.js') }}"></script>
+<script defer src="{{asset('js/customerRegister.js')}}"></script>
+
+
+
+
 
 
 

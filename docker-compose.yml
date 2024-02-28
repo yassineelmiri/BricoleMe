@@ -29,7 +29,7 @@ services:
             - '${FORWARD_DB_PORT:-5432}:5432'
         environment:
             PGPASSWORD: '200361816'
-            POSTGRES_DB: 'Bricole_DB'
+            POSTGRES_DB: 'db_bricole_me'
             POSTGRES_USER: 'postgres'
             POSTGRES_PASSWORD: '200361816'
         volumes:
