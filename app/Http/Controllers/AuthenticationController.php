@@ -20,6 +20,13 @@ class AuthenticationController extends Controller
     {
         return view('auth.login');
     }
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return to_route('login')->with('success', 'Vous étes bien déconnecté.');
+     
+    }
 
     public function artisanRegistrationPage()
     {
@@ -142,7 +149,7 @@ class AuthenticationController extends Controller
 
             if($user->is_artisan()){
                 Session::put('role','artisan');
-                return redirect()->route('artisan.dashboard');
+                return to_route('artisan.dashboard');
             }
             else if($user->is_customer()){
                 Session::put('role','customer');

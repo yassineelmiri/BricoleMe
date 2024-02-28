@@ -1,7 +1,7 @@
 <!-- Start Navbar -->
     <div class="container">
         <!-- Logo container-->
-        <a class="logo" href="index.html">
+        <a class="logo" href="<?php echo e(route('artisan.index')); ?>">
             <div class="block sm:hidden">
                 <img src="assets/images/logo-icon-40.png" class="h-10 inline-block dark:hidden" alt="">
                 <img src="assets/images/logo-icon-40-white.png" class="h-10 hidden dark:inline-block" alt="">
@@ -49,12 +49,12 @@
                     onclick="event.stopPropagation();">
                     <ul class="py-2 text-start">
                         <li>
-                            <a href="<?php echo e(route('client.index')); ?>"
+                            <a href="<?php echo e(route('artisan.detail', Auth::user()->id)); ?>"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="user" class="size-4 me-2"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="<?php echo e(route('edit.artisan')); ?>"
+                            <a href="<?php echo e(route('edit.artisan',Auth::user()->id)); ?>"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="settings" class="size-4 me-2"></i>Settings</a>
                         </li>
@@ -65,7 +65,7 @@
                                     data-feather="lock" class="size-4 me-2"></i>Lockscreen</a>
                         </li>
                         <li>
-                            <a href="login.html"
+                            <a href="<?php echo e(route('log-out')); ?>"
                                 class="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-emerald-600 dark:hover:text-white"><i
                                     data-feather="log-out" class="size-4 me-2"></i>Logout</a>
                         </li>
@@ -81,59 +81,21 @@
                 <li class="has-submenu parent-menu-item">
                     <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
                     <ul class="submenu">
-                        <li><a href="index.html" class="sub-menu-item">Hero One</a></li>
-                        <li><a href="index-two.html" class="sub-menu-item">Hero Two</a></li>
-                        <li><a href="index-three.html" class="sub-menu-item">Hero Three</a></li>
-                        <li><a href="index-four.html" class="sub-menu-item">Hero Four</a></li>
-                        <li><a href="index-five.html" class="sub-menu-item">Hero Five</a></li>
-                        <li><a href="index-six.html" class="sub-menu-item">Hero Six </a></li>
-                        <li><a href="index-seven.html" class="sub-menu-item">Hero Seven </a></li>
-                        <li><a href="index-eight.html" class="sub-menu-item">Hero Eight</a></li>
-                        <li><a href="index-nine.html" class="sub-menu-item">Hero Nine <span
+                        <li><a href="<?php echo e(route('home')); ?>" class="sub-menu-item">Home Principal</a></li>
+                        <li><a href="<?php echo e(route('home')); ?>" class="sub-menu-item">Home Resevation</a></li>
+                        <li><a href="index-two.html" class="sub-menu-item">reclamation</a></li>
+                        <li><a href="index-nine.html" class="sub-menu-item">historique<span
                                     class="bg-yellow-500 inline-block text-white text-[10px] font-bold px-2.5 py-0.5 rounded h-5 ms-1">New</span></a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="has-submenu parent-parent-menu-item"><a href="javascript:void(0)"> Jobs </a><span
+                <li class="has-submenu parent-parent-menu-item"><a href="javascript:void(0)"> reclamation </a><span
                         class="menu-arrow"></span>
                     <ul class="submenu">
-                        <li><a href="job-categories.html" class="sub-menu-item">Job Categories</a></li>
-
-                        <li class="has-submenu parent-menu-item">
-                            <a href="javascript:void(0)"> Job Grids </a><span class="submenu-arrow"></span>
-                            <ul class="submenu">
-                                <li><a href="job-grid-one.html" class="sub-menu-item">Job Grid One</a></li>
-                                <li><a href="job-grid-two.html" class="sub-menu-item">Job Grid Two</a></li>
-                                <li><a href="job-grid-three.html" class="sub-menu-item">Job Grid Three</a></li>
-                                <li><a href="job-grid-four.html" class="sub-menu-item">Job Grid Four </a></li>
-                            </ul>
-                        </li>
-
-                        <li class="has-submenu parent-menu-item">
-                            <a href="javascript:void(0)"> Job Lists </a><span class="submenu-arrow"></span>
-                            <ul class="submenu">
-                                <li><a href="job-list-one.html" class="sub-menu-item">Job List One</a></li>
-                                <li><a href="job-list-two.html" class="sub-menu-item">Job List Two</a></li>
-                                <li><a href="job-list-three.html" class="sub-menu-item">Job List Three</a></li>
-                                <li><a href="job-list-four.html" class="sub-menu-item">Job List Four</a></li>
-                                <li><a href="job-list-five.html" class="sub-menu-item">Job List Five </a></li>
-                                <li><a href="job-list-six.html" class="sub-menu-item">Job List Six </a></li>
-                            </ul>
-                        </li>
-
-                        <li class="has-submenu parent-menu-item">
-                            <a href="javascript:void(0)"> Job Detail </a><span class="submenu-arrow"></span>
-                            <ul class="submenu">
-                                <li><a href="job-detail-one.html" class="sub-menu-item">Job Detail One</a></li>
-                                <li><a href="job-detail-two.html" class="sub-menu-item">Job Detail Two</a></li>
-                                <li><a href="job-detail-three.html" class="sub-menu-item">Job Detail Three</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="job-apply.html" class="sub-menu-item">Job Apply</a></li>
-
-                        <li><a href="job-post.html" class="sub-menu-item">Job Post </a></li>
+                        <li><a href="job-categories.html" class="sub-menu-item">Reclamation Artisan</a></li>
+                        <li><a href="job-apply.html" class="sub-menu-item">Reclamation Site web</a></li>
+                        <li><a href="job-post.html" class="sub-menu-item">eclamation Service</a></li>
 
                         <li><a href="career.html" class="sub-menu-item">Career </a></li>
                     </ul>
