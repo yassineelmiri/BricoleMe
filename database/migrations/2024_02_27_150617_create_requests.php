@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('requests_artisans', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('artisan_id')->constrained('artisans');
             $table->string('status');
+            $table->string('new_profession');
             $table->string('description');
             $table->timestamps();
         });

@@ -155,6 +155,10 @@ class AuthenticationController extends Controller
                 Session::put('role','customer');
                 return redirect()->route('customer.dashboard');
             }
+            else if ($user->is_admin()){
+                session::put('role','admin');
+                return redirect()->intended('/Admin-stats');
+            }
         }
         else{
             return redirect()->back()->withErrors(['login' => 'Invalid Credentials']);

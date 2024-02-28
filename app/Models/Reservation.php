@@ -19,6 +19,9 @@ class Reservation extends Model
         return $this->belongsToOne(client::class);
     }
 
+    public function Claim(){
+        return $this->hasOne(Claims::class);
+    }
     protected $fillable = [
         'timing',
         'description',
