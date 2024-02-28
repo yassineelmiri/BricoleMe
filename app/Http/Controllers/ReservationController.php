@@ -32,6 +32,25 @@ class ReservationController extends Controller
         return redirect()->route('reservation.index')->with('success', 'Reservation created successfully!');
 
     }
+
+
+    public function showReservations()
+    {
+        $client = auth()->user()->client->first();
+
+        $reservations = $client->reservations;
+
+        return view('client.reservation', compact('reservations'));
+    }
+
+    public function destroy($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        $reservation->delete();
+
+        return redirect()->route('reservations.index')
+            ->with('success', 'Reservation deleted successfully');
+    }
 }
 
 

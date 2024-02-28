@@ -16,7 +16,6 @@ return new class extends Migration
             $table->dateTime('timing');
             $table->string('description');
             $table->string('status');
-            $table->string('confirmation_of_artisans');
             $table->foreignId('client_id')->constrained('clients');
             $table->timestamps();
         });

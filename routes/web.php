@@ -154,8 +154,9 @@ Route::group(['middleware' => 'role:customer'], function () {
 
 
 Route::get('/create-reservation', [ReservationController::class, 'create'])->name('create.reservation');
+Route::get('/display-res', [ReservationController::class, 'showReservations'])->name('display.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
-
+Route::delete('/reservations/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
 
 
 Route::get('/invoice', [InvoiceController::class, 'generate']);

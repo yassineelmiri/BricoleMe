@@ -236,7 +236,7 @@
                                     <select id="services" name="service_ids[]" multiple>
                                         @foreach ($services as $service)
                                             <option value="{{ $service->id }}">[{{ $service->skill }} ] -
-                                                {{ $service->max_price }}$</option>
+                                                ${{ $service->max_price }}$</option>
                                         @endforeach
                                     </select>
                                     <br>
