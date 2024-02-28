@@ -9,6 +9,8 @@ use App\Models\Profession;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class ArtisanController extends Controller
@@ -17,13 +19,20 @@ class ArtisanController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $users = User::all();
-        $professions = Profession::all();
-        $services = Services::all();
-        return view('artisan.index',compact('users','professions','services'));
+{
+    $artisans = Artisan::all();
+    $users = []; 
+
+    foreach ($artisans as $artisan) {
+        $users[] = User::where('id', $artisan->user_id)->first();
     }
-  
+    
+    $professions = Profession::all();
+    $services = Services::all();
+
+    return view('artisan.index', compact('users', 'professions', 'services'));
+}
+
     /**
      * Show the form for creating a new resource.
      */

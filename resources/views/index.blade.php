@@ -34,27 +34,21 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span
-                                            class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('show.profession') }}"> client selection de service</a>
+                                    <a class="nav-link" href="#ABOUT">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('client.index') }}">client</a>
+                                    <a class="nav-link" href="#SERVICES">Service</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('artisan.index') }}">Artisan</a>
+                                    <a class="nav-link" href="#CLIENTS">Clients</a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('show.artisan') }}">Artisan show</a>
+                                    <a class="nav-link" href="#CONTACT">Contact Us</a>
                                 </li>
-                                <li class="nav-item">
-                                    {{-- <a class="nav-link" href="{{ route('show.client') }}">client show</a> --}}
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
-                                </li>                      
                             </ul>
                         </div>
                     </nav>
@@ -76,9 +70,18 @@
                                 Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic
                                 praesentium mollitia consequatur beatae, aspernatur culpa.
                             </p>
-                            <a href="{{ route('login.view') }}">
-                                Login
-                            </a>
+                            @auth
+                                <a href="{{ route('log-out') }}">
+                                    log-out
+                                </a>
+                            @endauth
+                            @guest
+                                <a href="{{ route('login.view') }}">
+                                    Login
+                                </a>
+                            @endguest
+
+
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -149,7 +152,7 @@
     </section>
 
 
-    <section class="about_section layout_padding-bottom">
+    <section id="ABOUT" class="about_section layout_padding-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6">
@@ -208,7 +211,7 @@
 
     <!-- service section -->
 
-    <section class="service_section layout_padding">
+    <section id="SERVICES" class="service_section layout_padding">
         <div class="container ">
             <div class="heading_container heading_center">
                 <h2> Our Services </h2>
@@ -272,7 +275,7 @@
     </section>
 
 
-    <section class="client_section ">
+    <section id="CLIENTS" class="client_section ">
         <div class="container">
             <div class="heading_container heading_center effect">
                 <h2>
@@ -401,7 +404,7 @@
             </div>
         </div>
     </section>
-    <section class="contact_section layout_padding">
+    <section id="#CONTACT" class="contact_section layout_padding">
         <div class="container">
             <div class="heading_container">
                 <h2>
@@ -410,7 +413,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <form action="">
+                    <form action="https://formsubmit.co/miriyassine123@gmail.com" method="POST">
                         <div>
                             <input type="text" placeholder="Name" />
                         </div>
@@ -424,7 +427,7 @@
                             <input type="text" class="message-box" placeholder="Message" />
                         </div>
                         <div class="d-flex ">
-                            <button>
+                            <button type="submit" onclick="return confirm('Vouler vous vraiment send Message')">
                                 SEND
                             </button>
                         </div>
