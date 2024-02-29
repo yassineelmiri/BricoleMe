@@ -24,6 +24,12 @@ class Reservation extends Model
         return $this->belongsTo(client::class);
     }
 
+    public function rating(): HasOne
+    {
+        return $this->hasOne(Rating::class);
+    }
+
+
     public function Claim(){
         return $this->hasOne(Claims::class);
     }

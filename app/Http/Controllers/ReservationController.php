@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\client;
 use App\Models\Reservation;
 use App\Models\ServiceOfArtisan;
+use App\Models\Rating;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class ReservationController extends Controller
         $reservation = Reservation::create([
             'timing' => $request->input('timing'),
             'description' => $request->input('description'),
-            'client_id' => $request->input('client_id'),
+            'client_id' => auth()->user()->client->id,
             'status' => 'pending', 
         ]);
 
@@ -29,7 +30,7 @@ class ReservationController extends Controller
             $reservation->ServiceOfArtisan()->attach($service);
         }
 
-        return redirect()->route('reservation.index')->with('success', 'Reservation created successfully!');
+        return redirect()->route('display.reservation')->with('success', 'Reservation created successfully!');
 
     }
 
@@ -50,6 +51,28 @@ class ReservationController extends Controller
 
         return redirect()->route('reservations.index')
             ->with('success', 'Reservation deleted successfully');
+    }
+
+
+    public function completeReservation($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+    
+ 
+    
+        if ($reservation->rating) {
+            return redirect()->back()->with('error', 'A rating has already been submitted for this reservation.');
+        }
+    
+    
+        $rating ->new Rating([
+            'rating' => request('rating'), 
+            'comment' => request('comment'),
+        ]);
+    
+        $reservation->rating()->save($rating);
+    
+        return redirect()->back()->with('success', 'Rating submitted successfully.');
     }
 }
 
