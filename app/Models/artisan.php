@@ -21,5 +21,8 @@ class Artisan extends Model
     {
         return $this->belongsToMany(Profession::class,'professions_of_artisan');
     }
+    public function request(){
+        return $this->hasMany(RequestModel::class,'requests');
+    }
 
 }

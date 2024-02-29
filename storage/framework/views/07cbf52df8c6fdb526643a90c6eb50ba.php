@@ -233,7 +233,6 @@ moi : cv"></textarea>
                         web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.
                     </p>
                 </div><!--end grid-->
-
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px] mt-8">
                     <div
                         class="group bg-white dark:bg-slate-900 relative overflow-hidden rounded-md shadow dark:shadow-gray-700 text-center p-6">
@@ -260,12 +259,12 @@ moi : cv"></textarea>
 
                         <div class="flex justify-between mt-2">
                             <div class="block">
-                                <span class="text-slate-400">Salery:</span>
-                                <span class="block text-sm font-semibold">$4k - $4.5k</span>
+                                <span class="text-slate-400">Reservation time:</span>
+                                <span class="block text-sm font-semibold"></span>
                             </div>
                             <div class="block">
                                 <span class="text-slate-400">Experience:</span>
-                                <span class="block text-sm font-semibold">2 Years</span>
+                                <span class="block text-sm font-semibold"></span>
                             </div>
                         </div>
 
@@ -280,153 +279,6 @@ moi : cv"></textarea>
                         <span
                             class="w-24 bg-yellow-400 text-white text-center absolute ltr:-rotate-45 rtl:rotate-45 -start-[30px] top-1"><i
                                 class="uil uil-star"></i></span>
-
-                        <span class="absolute top-[10px] end-4">
-                            <a href="javascript:void(0)"
-                                class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i
-                                    class="mdi mdi-heart"></i></a>
-                        </span>
-                    </div><!--end content-->
-
-                    <div
-                        class="group bg-white dark:bg-slate-900 relative overflow-hidden rounded-md shadow dark:shadow-gray-700 text-center p-6">
-                        <img src="assets/images/team/02.jpg"
-                            class="size-20 rounded-full shadow dark:shadow-gray-700 mx-auto" alt="">
-
-                        <div class="mt-2">
-                            <a href="candidate-detail.html"
-                                class="hover:text-emerald-600 font-semibold text-lg">Tiffany Betancourt</a>
-                            <p class="text-sm text-slate-400">Web Designer</p>
-                        </div>
-
-                        <ul class="mt-2 list-none">
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Design</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">UI</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Digital</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex justify-between mt-2">
-                            <div class="block">
-                                <span class="text-slate-400">Salery:</span>
-                                <span class="block text-sm font-semibold">$4k - $4.5k</span>
-                            </div>
-                            <div class="block">
-                                <span class="text-slate-400">Experience:</span>
-                                <span class="block text-sm font-semibold">2 Years</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <a href="candidate-detail.html"
-                                class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Profile</a>
-                            <a href="#"
-                                class="btn btn-sm btn-icon bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-full ms-1"><i
-                                    class="uil uil-hipchat text-[20px]"></i></a>
-                        </div>
-
-                        <span class="absolute top-[10px] end-4">
-                            <a href="javascript:void(0)"
-                                class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i
-                                    class="mdi mdi-heart"></i></a>
-                        </span>
-                    </div><!--end content-->
-
-                    <div
-                        class="group bg-white dark:bg-slate-900 relative overflow-hidden rounded-md shadow dark:shadow-gray-700 text-center p-6">
-                        <img src="assets/images/team/03.jpg"
-                            class="size-20 rounded-full shadow dark:shadow-gray-700 mx-auto" alt="">
-
-                        <div class="mt-2">
-                            <a href="candidate-detail.html"
-                                class="hover:text-emerald-600 font-semibold text-lg">Jacqueline Burns</a>
-                            <p class="text-sm text-slate-400">Web Designer</p>
-                        </div>
-
-                        <ul class="mt-2 list-none">
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Design</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">UI</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Digital</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex justify-between mt-2">
-                            <div class="block">
-                                <span class="text-slate-400">Salery:</span>
-                                <span class="block text-sm font-semibold">$4k - $4.5k</span>
-                            </div>
-                            <div class="block">
-                                <span class="text-slate-400">Experience:</span>
-                                <span class="block text-sm font-semibold">2 Years</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <a href="candidate-detail.html"
-                                class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Profile</a>
-                            <a href="#"
-                                class="btn btn-sm btn-icon bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-full ms-1"><i
-                                    class="uil uil-hipchat text-[20px]"></i></a>
-                        </div>
-
-                        <span class="absolute top-[10px] end-4">
-                            <a href="javascript:void(0)"
-                                class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i
-                                    class="mdi mdi-heart"></i></a>
-                        </span>
-                    </div><!--end content-->
-
-                    <div
-                        class="group bg-white dark:bg-slate-900 relative overflow-hidden rounded-md shadow dark:shadow-gray-700 text-center p-6">
-                        <img src="assets/images/team/04.jpg"
-                            class="size-20 rounded-full shadow dark:shadow-gray-700 mx-auto" alt="">
-
-                        <div class="mt-2">
-                            <a href="candidate-detail.html" class="hover:text-emerald-600 font-semibold text-lg">Mari
-                                Harrington</a>
-                            <p class="text-sm text-slate-400">Web Designer</p>
-                        </div>
-
-                        <ul class="mt-2 list-none">
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Design</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">UI</span>
-                            </li>
-                            <li class="inline"><span
-                                    class="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Digital</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex justify-between mt-2">
-                            <div class="block">
-                                <span class="text-slate-400">Salery:</span>
-                                <span class="block text-sm font-semibold">$4k - $4.5k</span>
-                            </div>
-                            <div class="block">
-                                <span class="text-slate-400">Experience:</span>
-                                <span class="block text-sm font-semibold">2 Years</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <a href="candidate-detail.html"
-                                class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Profile</a>
-                            <a href="#"
-                                class="btn btn-sm btn-icon bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-full ms-1"><i
-                                    class="uil uil-hipchat text-[20px]"></i></a>
-                        </div>
 
                         <span class="absolute top-[10px] end-4">
                             <a href="javascript:void(0)"
