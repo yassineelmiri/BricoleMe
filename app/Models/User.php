@@ -62,6 +62,9 @@ class User extends Authenticatable
         return $this->hasOne(Admin::class);
     }
 
+    public function is_admin(){
+        return $this->admin()->exists();
+    }
     public function is_artisan(){
         return $this->artisan()->exists();
     }

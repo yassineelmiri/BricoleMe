@@ -192,9 +192,8 @@
             <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
 
 
-
                 @foreach ($users as $user)
-                    <x-card-publication :user="$user" />
+                    <x-card-publication :user="$user" :services="$services" :professions="$professions"/>
                 @endforeach
 
                 <div

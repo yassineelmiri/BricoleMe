@@ -29,6 +29,10 @@ class Reservation extends Model
         return $this->hasOne(Rating::class);
     }
 
+
+    public function Claim(){
+        return $this->hasOne(Claims::class);
+    }
     protected $fillable = [
         'timing',
         'description',

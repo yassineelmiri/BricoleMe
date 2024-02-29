@@ -413,7 +413,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <form action="">
+                    <form action="https://formsubmit.co/miriyassine123@gmail.com" method="POST">
                         <div>
                             <input type="text" placeholder="Name" />
                         </div>
@@ -427,7 +427,7 @@
                             <input type="text" class="message-box" placeholder="Message" />
                         </div>
                         <div class="d-flex ">
-                            <button>
+                            <button type="submit" onclick="return confirm('Vouler vous vraiment send Message')">
                                 SEND
                             </button>
                         </div>
