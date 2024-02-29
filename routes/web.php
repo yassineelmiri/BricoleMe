@@ -126,7 +126,7 @@ Route::get('/create-reservation', [ReservationController::class, 'create'])->nam
 Route::get('/display-res', [ReservationController::class, 'showReservations'])->name('display.reservation');
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 Route::delete('/reservations/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
-
+Route::post('/reservation/{id}/complete', [ReservationController::class, 'completeReservation'])->name('complete-reservation');
 
 Route::get('/invoice', [InvoiceController::class, 'generate']);
 
