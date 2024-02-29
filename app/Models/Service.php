@@ -13,4 +13,14 @@ class Service extends Model
     {
         return $this->belongsToMany(Reservation::class)->using(ReservationOfService::class);
     }
+
+    public function artisans()
+    {
+        return $this->belongsToMany(Artisan::class,'services_of_artisans');
+    }
+
+    public function professions()
+    {
+        return $this->belongsToMany(Profession::class,'services_of_profession');
+    }
 }

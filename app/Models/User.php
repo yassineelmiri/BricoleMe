@@ -71,9 +71,11 @@ class User extends Authenticatable
       return $this->customer()->exists();
     }
 
-<<<<<<< HEAD
+    public function is_admin()
+    {
+        return $this->admin()->exists();
+    }
 
 }
-=======
-}
->>>>>>> a379308da12ef8e34f1d7a473a7315d2b1def3e8
+
+

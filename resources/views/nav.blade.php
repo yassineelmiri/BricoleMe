@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-amber-50">
-    <div class="flex flex-col h-screen bg-amber-50">
+    <div class="flex flex-col h-screen bg-amber-50 z-0">
 
 
         <div class="bg-white text-white shadow w-full p-2 flex items-center justify-between">

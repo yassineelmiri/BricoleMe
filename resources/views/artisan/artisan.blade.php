@@ -14,6 +14,8 @@
     </div>
     <!-- End Hero -->
 
+
+
     <!-- Start -->
     <section class="relative mb:pb-24 pb-16 -mt-16 z-1">
         <div class="container">
@@ -260,7 +262,7 @@
                                             class="form-input border border-slate-100 dark:border-slate-800 mt-2"
                                             >
                                     </div>
-                                    
+
                                     <div>
                                         <label for="name2" class="font-semibold">Time:</label>
                                         <input name="timing" id="name2" type="date"
@@ -284,7 +286,7 @@
                                     <br>
 
                                 </div>
-                                <button type="submit" id="submit2" 
+                                <button type="submit" id="submit2"
                                     class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">make reservation
                                     </button>
                             </form>
@@ -416,7 +418,11 @@
                 </div><!--end grid-->
             </div><!--end container-->
         </div><!--end container-->
+
+
+
     </section><!--end section-->
     <!-- Start -->
-
+=
 </x-master>
+

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('skill');
             $table->float('max_price');
-            $table->foreignId('profession_id')->constrained('professions');
+//            $table->foreignId('profession_id')->constrained('professions');
             $table->timestamps();
         });
     }

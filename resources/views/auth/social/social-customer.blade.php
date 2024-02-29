@@ -70,7 +70,6 @@
 
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer src="{{ asset('node_modules/nice-select2/dist/js/nice-select2.js') }}"></script>
-
 <script defer src="{{asset('js/customerRegister.js')}}"></script>
 
 

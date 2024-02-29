@@ -22,4 +22,9 @@ class Artisan extends Model
         return $this->belongsToMany(Profession::class,'professions_of_artisan');
     }
 
+    public function services()
+    {
+        return $this->belongsToMany(Service::class,'services_of_artisans');
+    }
+
 }

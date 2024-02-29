@@ -66,34 +66,46 @@ class AuthenticationController extends Controller
     public function artisanRegistration(Request $request)
     {
        if(isset($request->add)){
+           try {
 
-           $request->validate([
-               'name' => 'required' ,
-               'email' => 'required|email',
-               'password' => 'required',
-               'profession' => 'required',
-               'city' => 'required',
-               'phone_number' => 'required|digits:10',
-               'images.*' => 'required|image|max:2048'
-           ]);
+               $request->validate([
+                   'name' => 'required' ,
+                   'email' => 'required|email',
+                   'password' => 'required',
+                   'profession' => 'required',
+                   'city' => 'required',
+                   'phone_number' => 'required|digits:10',
+                   'images.*' => 'required|image|max:2048'
+               ]);
 
-           $user_data = $request->only(['name','email','password','city','phone_number']);
+               $user_data = $request->only(['name','email','password','city','phone_number']);
 
-           $user = User::create($user_data);
+               $user = User::create($user_data);
 
-           $artisan = Artisan::create(['user_id' =>$user->id ]);
+               $artisan = Artisan::create(['user_id' =>$user->id ]);
 
-           ProfessionsOfArtisan::create(['artisan_id' => $artisan->id , 'profession_id' => $request->profession]);
+               ProfessionsOfArtisan::create(['artisan_id' => $artisan->id , 'profession_id' => $request->profession]);
 
-           $images = $request->file('images');
+               $images = $request->file('images');
 
-           foreach ($images as $img){
-               $image_name = date('YmdHis').'.'.$img->getClientOriginalExtension();
-               $img->storeAs('public/uploads',$image_name);
-               Image::create(['artisan_id' => $artisan->id , 'path' => $image_name]);
+
+
+               foreach ($images as $img){
+                  if ($img->isValid()){
+                      $image_name = date('YmdHis').'.'.$img->getClientOriginalExtension();
+                      $img->storeAs('public/uploads',$image_name);
+                      Image::create(['artisan_id' => $artisan->id , 'path' => 'uploads/'.$image_name]);
+                  }
+                  else{
+                      abort(404,'invalid image');
+                  }
+               }
+
+               return response()->json(['success' , 'Registred Successfully , Please Log In !']);
            }
-
-           return response()->json(['success' , 'Registred Successfully , Please Log In !']);
+           catch (\PDOException $e){
+               abort(404,$e->getMessage());
+           }
        }
     }
 
@@ -142,7 +154,7 @@ class AuthenticationController extends Controller
 
             if($user->is_artisan()){
                 Session::put('role','artisan');
-                return redirect()->route('artisan.dashboard');
+                return redirect()->route('show.artisan');
             }
             else if($user->is_customer()){
                 Session::put('role','customer');
