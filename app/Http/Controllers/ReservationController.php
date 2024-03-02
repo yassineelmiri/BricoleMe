@@ -65,7 +65,7 @@ class ReservationController extends Controller
         }
     
     
-        $rating ->new Rating([
+        $rating = new Rating([
             'rating' => request('rating'), 
             'comment' => request('comment'),
         ]);
@@ -74,6 +74,21 @@ class ReservationController extends Controller
     
         return redirect()->back()->with('success', 'Rating submitted successfully.');
     }
+
+
+
+    public static function updateStatus()
+{
+    $reservations = Reservation::where('status', 'pending')
+        ->where('created_at', '<', now()->subMinutes(10))
+        ->get();
+
+    foreach ($reservations as $reservation) {
+        $reservation->update(['status' => 'completed']);
+    }
+
+    return 'Reservation status updated successfully.';
+}
 }
 
 

@@ -9,6 +9,11 @@ class Rating extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'rating',
+        'comment',
+    ];
+
     public function reservation(): BelongsTo
     {
         return $this->belongsTo(Reservation::class);

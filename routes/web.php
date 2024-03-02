@@ -158,6 +158,7 @@ Route::get('/display-res', [ReservationController::class, 'showReservations'])->
 Route::post('/store-reservation', [ReservationController::class, 'store'])->name('store.reservation');
 Route::delete('/reservations/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
 Route::post('/reservation/{id}/complete', [ReservationController::class, 'completeReservation'])->name('complete-reservation');
+Route::get('/update-status', [ReservationController::class, 'updateStatus']);
 
 Route::get('/invoice', [InvoiceController::class, 'generate']);
 
